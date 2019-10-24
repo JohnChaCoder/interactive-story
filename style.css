@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+  }
+  p {
+    color: black;
+    font-family: inherit;
+    text-align: left;
+  }
+  h1 {
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: left;
+  }
+  .TITLE {
+    font-size: 28px;
+  }
