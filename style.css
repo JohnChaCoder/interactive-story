@@ -8,9 +8,17 @@ body {
   }
   h1 {
     font-weight: bold;
-    font-family: sans-serif;
     text-align: left;
   }
-  .TITLE {
+  .Title {
+    color: orange;
+    text-shadow: 2px 2px black;
     font-size: 28px;
+    font-family: cursive;
+  }
+  .story {
+    font-family: Tw Cen MT;
+  }
+  .buttons {
+    font-family: Tw Cen MT;
   }

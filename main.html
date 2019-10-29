@@ -35,11 +35,11 @@
         -->
 
     <!-- This displays each part of the story in these tags that are stored in the array -->
-    <div id="story">
+    <div id="story" class="story">
 
     </div>
     <p></p>
-    <div id="buttons">
+    <div id="buttons" class="buttons">
 
     </div>
 
@@ -92,9 +92,9 @@
             // append to HTML(?)
             btnContain.appendChild(button);
 
-            // Outputs the choice you have made
+            // Outputs the choice you have made after clicking the button
             button.addEventListener ("click", function () {
-                alert("Chose " + choice);
+                alert("You chose " + choice);
             });
         }
 
