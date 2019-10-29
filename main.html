@@ -13,10 +13,82 @@
     <title>The Orange Cat and the Black Cat Group</title>
 </head>
 <body>
-    <h1 class="Title">Coming Soon...</h1>
+
+        <h1 class="Title">Coming Soon...</h1>
+        <p></p>
+        <!--
+        <button>Not clickable yet</button>
+        <button>Not clickable yet</button>
+        <button>Not clickable yet</button>
+        -->
+
+    <!-- This displays each part of the story in these tags -->
+    <div id="story">
+
+    </div>
     <p></p>
-    <button>Not clickable yet</button>
-    <button>Not clickable yet</button>
-    <button>Not clickable yet</button>
+    <div id="buttons">
+
+    </div>
+
+    <!-- JAVASCRIPT CODE -->
+    <script>
+    
+        // 
+        let storyContain = document.getElementById("story");
+
+        // 
+        storyContain.innerHTML = "INPUT STORY CONTEXT HERE"
+
+        // 
+        let btnContain = document.getElementById("buttons");
+
+        // The "story" object
+        const story = {
+            intro : {
+                text : "The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here",
+                choices : ["one", "two", "three"]
+            }
+        }
+
+        // button choices
+        for(let choice of story.intro.choices) {
+            createBtn(choice, choice)
+        }
+        
+        // function that makes a button
+        function createBtn(btnText, choice) {
+            // 
+            let button = document.createElement
+            ("button");
+
+            // 
+            button.innerHTML = btnText
+
+            // 
+            btnContain.appendChild(button);
+
+            // Outputs the choice you have made
+            button.addEventListener ("click", function () {
+                alert("Chose " + choice);
+            });
+        }
+
+        // function to show a story
+        function storyFlow(text) {
+            let storyItem = document.createElement
+            ("p");  // paragraph tag
+
+            // 
+            storyItem.innerText = text
+
+            // 
+            storyContain.appendChild(storyItem);
+        }
+        
+        // 
+        storyFlow(story.intro.text)
+
+    </script>
 </body>
 </html>
