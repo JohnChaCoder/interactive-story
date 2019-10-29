@@ -14,15 +14,17 @@
 </head>
 <body>
 
+        <!-- This is the title for the interactive story -->
         <h1 class="Title">Coming Soon...</h1>
         <p></p>
+        <!-- These buttons are just placeholders -->
         <!--
         <button>Not clickable yet</button>
         <button>Not clickable yet</button>
         <button>Not clickable yet</button>
         -->
 
-    <!-- This displays each part of the story in these tags -->
+    <!-- This displays each part of the story in these tags that are stored in the array -->
     <div id="story">
 
     </div>
@@ -34,16 +36,21 @@
     <!-- JAVASCRIPT CODE -->
     <script>
     
-        // 
+        // Our parts of the story in an array
         let storyContain = document.getElementById("story");
 
-        // 
+        // Our story context
         storyContain.innerHTML = "INPUT STORY CONTEXT HERE"
 
-        // 
+        // Our buttons from the array
         let btnContain = document.getElementById("buttons");
 
-        // The "story" object
+    // ============================================================================
+    // The "story" object
+    // 
+    // intro - The starting point of our story
+    // choices - The button choices that are different in each part of the story
+    // ============================================================================
         const story = {
             intro : {
                 text : "The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here",
@@ -56,16 +63,16 @@
             createBtn(choice, choice)
         }
         
-        // function that makes a button
+        // function that makes a button from the array of choices
         function createBtn(btnText, choice) {
-            // 
+            // create a button
             let button = document.createElement
             ("button");
 
-            // 
+            // Get the text
             button.innerHTML = btnText
 
-            // 
+            // append to HTML(?)
             btnContain.appendChild(button);
 
             // Outputs the choice you have made
@@ -75,19 +82,19 @@
         }
 
         // function to show a story
-        function storyFlow(text) {
+        function showStory(text) {
             let storyItem = document.createElement
             ("p");  // paragraph tag
 
-            // 
+            // stores the text(?)
             storyItem.innerText = text
 
-            // 
+            // append to HTML(?)
             storyContain.appendChild(storyItem);
         }
         
-        // 
-        storyFlow(story.intro.text)
+        // Shows the intro currently
+        showStory(story.intro.text)
 
     </script>
 </body>
