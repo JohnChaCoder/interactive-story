@@ -1,3 +1,13 @@
+<!--
+// ==============================================================================================================
+// The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story
+//
+// Source code created by Johnny Cha
+// With help and thanks to Marflor and Krystal
+//
+// Started on Wednesday October 23, 2019
+// ==============================================================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +25,7 @@
 <body>
 
         <!-- This is the title for the interactive story -->
-        <h1 class="Title">Coming Soon...</h1>
+        <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
         <p></p>
         <!-- These buttons are just placeholders -->
         <!--
@@ -45,12 +55,12 @@
         // Our buttons from the array
         let btnContain = document.getElementById("buttons");
 
-    // ============================================================================
-    // The "story" object
-    // 
-    // intro - The starting point of our story
-    // choices - The button choices that are different in each part of the story
-    // ============================================================================
+// ============================================================================
+// The "story" object
+// 
+// intro - The starting point of our story
+// choices - The button choices that are different in each part of the story
+// ============================================================================
         const story = {
             intro : {
                 text : "The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here The Orange Cat was here",
@@ -64,6 +74,13 @@
         }
         
         // function that makes a button from the array of choices
+
+// ============================================================================
+// Subroutine that makes a button from the array of choices
+// 
+// btnText - Shows the text on the button that was created
+// choice - The choices shown that are different in each part of the story
+// ============================================================================
         function createBtn(btnText, choice) {
             // create a button
             let button = document.createElement
