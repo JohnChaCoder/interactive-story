@@ -76,7 +76,11 @@
             },
             option1 : {
                 text : "You go to class and your day continues as normal ",
-                choices : ["four", "five", "six"]
+                choices : [
+                    ["four", "option2"],
+                    ["five", "option3"],
+                    ["six", "option4"]
+                ]
             },
             option2 : {
                 text : "This right here is the option 2 thingery",
@@ -97,13 +101,17 @@
             option6 : {
                 text : "This right here is the option 6 thingery",
                 choices : ["nineteen", "twenty", "twentyone"]
+            },
+            finalPage : {
+                text : "This is the end of the story",
+                choices : []
             }
         }
 
         // button choices
-        for(let choice of story.intro.choices) {
-            createBtn(choice, choice)
-        }
+//      for(let choice of story.intro.choices) {
+//          createBtn(choice, choice)
+//      }
 
 // ============================================================================
 // Subroutine that creates a button from the array of choices
@@ -124,7 +132,9 @@
 
             // Outputs the choice you have made after clicking the button
             button.addEventListener ("click", function () {
+                pagehist.push(choice);
                 alert("You chose " + choice);
+                outputStory();
             });
         }
 
@@ -144,7 +154,7 @@
         function outputStory() {
 
             // sets the current page to the last index of the array.
-            let page = pagehist[pagehist.length - 1];
+            let currentpage = pagehist[pagehist.length - 1];
 
             // reset the story HTML and buttons
             storyContain.innerHTML  = "";
@@ -156,14 +166,14 @@
             }
 
             // builds the buttons for the story in the array
-            for (let choice of story[page].choices) {
+            for (let choice of story[currentpage].choices) {
                 createBtn(choice[0], choice[1])
             }
         }
         
         // Shows the current story
         //showStory(story.intro.text)
-        showStory()
+        outputStory();
 
     </script>
 
