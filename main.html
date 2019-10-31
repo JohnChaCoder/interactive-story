@@ -31,10 +31,10 @@
         <!-- These buttons are just placeholders -->
         <!--
         <button>Not clickable yet</button>
-        <button>Not clickable yet</button>
-        <button>Not clickable yet</button>
-        -->
+        <button>Not clickable yet</button>>
+        <button>Not clickable yet</button
 
+-->
     <!-- This displays each part of the story in these tags that are stored in the array -->
     <div id="story" class="story">
 
@@ -63,7 +63,7 @@
 // ============================================================================
         const story = {
             intro : {
-                text : "You have three choices",
+                text : "You have three choices:",
                 choices : ["Go to class", "Confront", "Go home"]
             },
             option1 : {
@@ -119,6 +119,7 @@
                 alert("You chose " + choice);
             });
         }
+    
 
         // function to show a story
         function showStory(text) {
