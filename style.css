@@ -1,24 +1,25 @@
 body {
-    background-color: white;
+    background-color: black;
     animation-name: fadefrom;
     animation-duration: 2s;
   }
   @keyframes fadefrom {
     from {background-color: black;}
-    to {background-color: white;}
+    to {background-color: black;}
   }
   p {
-    color: black;
+    color: white;
     font-family: inherit;
     text-align: left;
   }
   h1 {
+    color: white;
     font-weight: bold;
     text-align: left;
   }
   .Title {
     color: orange;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px white;
     font-size: 28px;
     font-family: cursive;
     animation-name: fadefrom2;
