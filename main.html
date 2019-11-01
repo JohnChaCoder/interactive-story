@@ -27,10 +27,14 @@
 </head>
 <body>
 
-        <!-- This is the title for the interactive story -->
-        <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
-        <p></p>
-        <p class="intro">It all began on a normal Monday morning at the elementary school...</p>
+    <!-- This is the title for the interactive story -->
+    <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
+    <p></p>
+    <!--
+    <p class="intro">You are The Orange Cat as he begins his day at the school.</p>
+    <p></p>
+    -->
+    <p class="intro">It all began on a normal Monday morning at the elementary school...</p>
 
     <!-- This displays each part of the story in these tags that are stored in the array -->
     <div id="story" class="story">
@@ -48,7 +52,7 @@
         let storyContain = document.getElementById("story");
 
         // Our story context
-        storyContain.innerHTML = "The Orange Cat goes to school that morning and hears the Black Cat Group hurting the students in the hallways."
+        //storyContain.innerHTML = ""
 
         // Our buttons from the array
         let btnContain = document.getElementById("buttons");
@@ -63,19 +67,32 @@
 // ============================================================================
         const story = {
             intro : {
-                text : "You have three choices",
+                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting the students in the hallways.\n\nWhat would he do?",
                 choices : [
                     ["Go to class", "option1"],
-                    ["Confront", "option2"],
-                    ["Go home", "option3"]
+                    ["Confront", "refuse"],
+                    ["Go home", "returnhome"]
                 ]
             },
             option1 : {
-                text : "You go to class and your day continues as normal ",
+                text : "He goes to class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
-                    ["four", "option2"],
-                    ["five", "option3"],
-                    ["six", "option4"]
+                    ["Confront them", "option2"],
+                    ["Do not confont them", "option3"]
+                ]
+            },
+            refuse : {
+                text : "He refuses to confront them because he doesn't want to get hurt like the student that was being currently bullied by the group.\nSo he goes to his class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
+                choices : [
+                    ["Confront them", "option2"],
+                    ["Do not confont them", "option3"]
+                ]
+            },
+            returnhome : {
+                text : "He felt that since he does not want to get hurt, he still wanted to be friends with everyone. So he continued on his day and went home that evening.\n\nThe next day, he still sees the group bullying another student. He just continues to go to his class as normal, since he still wanted to do something about the group during lunch.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
+                choices : [
+                    ["Confront them", "option2"],
+                    ["Do not confont them", "option3"]
                 ]
             },
             option2 : {
@@ -114,6 +131,78 @@
                 text : "This right here is the option 6 thingery",
                 choices : [
                     ["nineteen", "finalPage"],
+                    ["twenty", "finalPage"],
+                    ["twentyone", "finalPage"]
+                ]
+            },
+            option7 : {
+                text : "This right here is the option 6 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            option8 : {
+                text : "This right here is the option 6 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            option9 : {
+                text : "This right here is the option 6 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            option10 : {
+                text : "This right here is the option 6 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            option11 : {
+                text : "This right here is the option 6 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            option12 : {
+                text : "This right here is the option 6 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            option13 : {
+                text : "This right here is the option 6 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            option14 : {
+                text : "This right here is the option 6 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            option15 : {
+                text : "This right here is the option 6 thingery",
+                choices : [
+                    ["nineteen", "null"],
                     ["twenty", "null"],
                     ["twentyone", "null"]
                 ]
@@ -122,6 +211,7 @@
                 text : "This is the end of the story\nPlease refresh the page to play again",
                 choices : []
             },
+            // A null command. Does nothing, basically.
             null : {
                 text : "null",
                 choices : []
