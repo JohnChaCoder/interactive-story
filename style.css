@@ -34,3 +34,13 @@ body {
   .buttons {
     font-family: Tw Cen MT;
   }
+  .intro {
+    color: black;
+    font-family: Tw Cen MT;
+    text-align: left;
+  }
+  .copyright {
+    font-family: Tahoma;
+    margin-bottom: -22px;
+    font-size: 10px;
+  }
