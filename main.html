@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- The title that shows on the browser -->
+    <!-- This is the title that shows on the browser -->
     <title>The Orange Cat and the Black Cat Group</title>
 </head>
 <body>
@@ -67,7 +67,7 @@
 // ============================================================================
         const story = {
             intro : {
-                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting the students in the hallways.\n\nWhat would he do?",
+                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and are formed to bully others for fun and money. Noticing this, he thought to himself how he should handle that situation.\n\nWhat would he do?",
                 choices : [
                     ["Go to class", "option1"],
                     ["Confront", "refuse"],
@@ -78,29 +78,35 @@
                 text : "He goes to class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "option2"],
-                    ["Do not confont them", "option3"]
+                    ["Do not confont them", "refuse2"]
                 ]
             },
             refuse : {
                 text : "He refuses to confront them because he doesn't want to get hurt like the student that was being currently bullied by the group.\nSo he goes to his class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "option2"],
-                    ["Do not confont them", "option3"]
+                    ["Do not confont them", "refuse2"]
                 ]
             },
             returnhome : {
                 text : "He felt that since he does not want to get hurt, he still wanted to be friends with everyone. So he continued on his day and went home that evening.\n\nThe next day, he still sees the group bullying another student. He just continues to go to his class as normal, since he still wanted to do something about the group during lunch.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "option2"],
-                    ["Do not confont them", "option3"]
+                    ["Do not confont them", "refuse2"]
                 ]
             },
             option2 : {
-                text : "This right here is the option 2 thingery",
+                text : "He goes up to the group and asks, \"Why are you doing this to the student?\"\n\"Well,\" the group said, \"We got him for the money we’re looking for. And since he doesn’t want his stuff to get stolen, we just had to do our job like we should.\"\n\"What did you actually do to him?\" The Orange Cat asked, \"Tell me more about it.\"\n\"Okay then,\" the group replied, \"We’ve actually threatened them by saying to him that if he declines to accept our offer, then he will deserve a beating. And since he declined to do so, we just have to beat him up. No exceptions.\"\nThe Orange Cat was furious. \"No, I do not like this,\" he said. \"If you ever try to do that ever again, I’m going to call the teacher or principal to come and get you guys for your actions, for what you have done to this innocent student.\"\n\"Oh, you want to expose us as bullies, solely?\" the group said. \"You can say that one more time and we will fight you out in the field, right outside the school.\"\n\nShould he take the risk of confronting them one more time?",
                 choices : [
-                    ["seven", "option3"],
-                    ["eight", "option4"],
-                    ["nine", "option5"]
+                    ["Yes", "option3"],
+                    ["No", "option4"]
+                ]
+            },
+            refuse2 : {
+                text : "He refuses to confront them because he doesn't want to get hurt like the student that was being currently bullied by the group.\nBut he still needs to do something about that group before lunch time ends.\n\nWhat would he do?",
+                choices : [
+                    ["Confront them", "option2"],
+                    ["Do not confont them", "refuse2"]
                 ]
             },
             option3 : {
@@ -238,7 +244,7 @@
             // Outputs the choice you have made after clicking the button
             button.addEventListener ("click", function () {
                 pagehist.push(choice);
-                alert("You chose " + choice);
+                alert("You chose " + choice + ".");
                 outputStory();
             });
         }
@@ -282,6 +288,18 @@
     </script>
 
     <p></p>
-    <h5 class="copyright">Copyright (C) 2019.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
+    <button onclick="about()">About</button>
+
+    <!-- JavaScript code ahead-->
+    <script>
+    
+    function about() {
+        alert("The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story\n\nCreated and coded by GitHub users JohnChaCoder, marflo35, and KrystalV8.\n\nCreated and edited using Visual Studio Code.\n© 2019 Microsoft Corporation. All rights reserved.")
+    }
+
+    </script>
+
+    <p></p>
+    <h5 class="copyright">Site version v1.0 Beta<br>© 2019. All rights reserved.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
 </body>
 </html>
