@@ -1,0 +1,261 @@
+<!--
+// ==============================================================================================================
+// The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story
+//
+// Source code created by JohnChaCoder
+// With help and thanks to mariflo35 and KrystalV8
+//
+// Started on Wednesday October 23, 2019
+//
+// Created and edited using Visual Studio Code. © 2019 Microsoft Corporation. All rights reserved.
+// ==============================================================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This is a favicon -->
+    <link rel="icon"
+    type="image/png"
+    href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Orange Cat and the Black Cat Group</title>
+</head>
+<body>
+
+        <!-- This is the title for the interactive story -->
+        <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
+        <p></p>
+        <!-- These buttons are just placeholders -->
+        <!--
+        <button>Not clickable yet</button>
+        <button>Not clickable yet</button>>
+        <button>Not clickable yet</button
+
+-->
+    <!-- This displays each part of the story in these tags that are stored in the array -->
+    <div id="story" class="story">
+
+    </div>
+    <p></p>
+    <div id="buttons" class="buttons">
+
+    </div>
+
+    <!-- JAVASCRIPT CODE -->
+    <script>
+    
+        // Our parts of the story in an array
+        let storyContain = document.getElementById("story");
+
+        // Our story context
+        storyContain.innerHTML = "The Orange Cat goes to school that morning and hears the Black Cat Group hurting the students in the hallways."
+
+        // Our buttons from the array
+        let btnContain = document.getElementById("buttons");
+
+// ============================================================================
+// The "story" object, which stores the different parts of the story
+//
+// choices - The button choices that are different in each part of the story
+// ============================================================================
+        const story = {
+            intro : {
+                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and are formed to bully others for fun and money. Noticing this, he thought to himself how he should handle that situation.\n\nWhat would he do?",
+                choices : [
+                    ["Go to class", "goclass"],
+                    ["Confront", "refuse"],
+                    ["Go home", "returnhome"]
+                ]
+            },
+            goclass : {
+                text : "He goes to class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
+                choices : [
+                    ["Confront them", "confront"],
+                    ["Do not confont them", "refuse2"]
+                ]
+            },
+            refuse : {
+                text : "He refuses to confront them because he doesn't want to get hurt like the student that was being currently bullied by the group.\nSo he goes to his class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
+                choices : [
+                    ["Confront them", "confront"],
+                    ["Do not confont them", "refuse2"]
+                ]
+            },
+            returnhome : {
+                text : "He felt that since he does not want to get hurt, he still wanted to be friends with everyone. So he continued on his day and went home that evening.\n\nThe next day, he still sees the group bullying another student. He just continues to go to his class as normal, since he still wanted to do something about the group during lunch.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
+                choices : [
+                    ["Confront them", "confront"],
+                    ["Do not confont them", "refuse2"]
+                ]
+            },
+            confront : {
+                text : "He goes up to the group and asks, \"Why are you doing this to the student?\"\n\n\"Well,\" the group said, \"We got him for the money we're looking for. And since he doesn't want his stuff to get stolen, we just had to do our job like we should.\"\n\n\"What did you actually do to him?\" The Orange Cat asked, \"Tell me more about it.\"\n\n\"Okay then,\" the group replied, \"We've actually threatened them by saying to him that if he declines to accept our offer, then he will deserve a beating. And since he declined to do so, we just have to beat him up. No exceptions.\"\n\nThe Orange Cat was furious. \"No, I do not like this,\" he said. \"If you ever try to do that ever again, I'm going to call the teacher or principal to come and get you guys for your actions, for what you have done to this innocent student.\"\n\n\"Oh, you want to expose us as bullies, solely?\" the group said. \"You can say that one more time and we will fight you out in the field, right outside the school.\"\n\nShould he take the risk of confronting them one more time?",
+                choices : [
+                    ["Yes", "acceptrisk"],
+                    ["No", "dontacceptrisk"]
+                ]
+            },
+            refuse2 : {
+                text : "He refuses to confront them because he doesn't want to get hurt like the student that was being currently bullied by the group.\nBut he still needs to do something about that group before lunch time ends.\n\nWhat would he do?",
+                choices : [
+                    ["Confront them", "confront"],
+                    ["Do not confont them", "refuse2"]
+                ]
+            },
+            acceptrisk : {
+                text : "The Orange Cat then took his risk at confronting them one more time, at his own expense.\n\n\"If you wish,\" The Orange Cat replied. \"You can get caught by playground monitors and advisors out there if you ever encounter a brawlout of any kind out in the field. I warn you, do not ever do that ever again.\"\n\nThe group then stared straight at him. \"Okay then,\" the group said. \"Let's fight!\"\n\nThe Black Cat Group then started chasing after him from hallways to hallways, doors to doors, rooms to rooms, and around the playground fields. The Orange Cat has to figure out what choices he has to make while running away from the group.\n\nWhat would he do?",
+                choices : [
+                    ["Find a hiding spot", "hide"],
+                    ["Stay put", "stayput"]
+                ]
+            },
+            dontacceptrisk : {
+                text : "The Orange Cat does not take the risk of confronting them one more time. However, the group thinks that he doesn't have anything else to say, so they took him outside to the fields to engage him in a brawlout. The Orange Cat was nervous in the situation he is in now, so he tries his best to take the group down. After several minutes into the fight, The Orange Cat was knocked out unconsious by the group themselves. He was taken to the nurses' office to get checked up for injuries, and has to stay home until he fully recovers.\n\nAfter he is fully recovered, he will prepare himself for the worst as he comes back to the group at lunch time.\n\nWhat would he do now?",
+                choices : [
+                    ["Confront them", "confront"],
+                    ["Do not confont them", "refuse2"]
+                ]
+            },
+            hide : {
+                text : "The Orange Cat then hides into a well-hidden spot near the playground fields, so that the group can't see him.\n\n\"Where did he go?\" the group said.\n\nThe group then took turns finding The Orange Cat, looking for him in the playground fields, the hallways, the rooms, and other hidden spots that they would find. When they didn't find him, they gave up hope and returned to their home base.\n\n\"Well,\" the group said, \"He has disappeared from our very eyes like the wind. Return to our home base, everyone!\"\n\nOnce the group is gone, The Orange Cat then thought up the plans to take the group of bullies down. He has concieved the idea of placing a trap near the area the group usually meet at, and then confronting them about their negative aspects of their own actions. He wanted to make sure that he would change the group's actions and behaviors for his own good, so he accepted the idea himself, and went to the hobby shop after school to get a dummy person, a wallet, a pair of fake paper money that looks realistic but is actually not, a pressure plate with the included traps, and a pair of sandbags.\n\nThat night, he secretly snuck in to the school and went to put up his traps near the area where the Black Cat Group meetup; he places the dummy person in the area, adjusting him so that he looks like has been overshadowed by the group, and then puts the wallet filled with fake money inside one of the front pockets of the dummy. He then sets up the pressure plate and sandbags while hanging the wires near the walls, hiding them precisely so that the group will not see them so that it would be obvious to them. Finally, he lifts the sandbags to the roof, and hid them so that the group will not notice.\n\nThe next day, at lunch time, he came across the group again, hoping to get their attention.\n\n\"What do you want?\" the group asked.\n\n\"I have a very special surprise for all of you guys,\" he said.\n\n\"Oh! What is it?\" the group replied. \"I hope it might be that person with a lot of money in its pockets!\"\n\n\"Well, lucky for all of you guys,\" said The Orange Cat, \"I do!\"\n\nWith excitement, the Black Cat Group ran to the spot where The Orange Cat set up his traps, and found the dummy person lying on the ground. They then went ahead and searched for the wallet in one of the pockets, and when they found it, they open it up to find some money that was actually fakes.\n\n\"Excuse me?\" the group responded, \"Are you sure this is the real money or not?\"\n\nWhat would The Orange Cat say to them?",
+                choices : [
+                    ["\"They are the real money\"", "pretendmoneyisreal"],
+                    ["\"They are actually fakes\"", "truthmoneyisfake"]
+                ]
+            },
+            // unused Q&A variant
+            hideQandA : {
+                text : "The Orange Cat then hides into a well-hidden spot near the playground fields, so that the group can't see him.\n\n\"Where did he go?\" the group said.\n\nThe group then took turns finding The Orange Cat, looking for him in the playground fields, the hallways, the rooms, and other hidden spots that they would find. When they didn't find him, they gave up hope and returned to their home base.\n\n\"Well,\" the group said, \"He has disappeared from our very eyes like the wind. Return to our home base, everyone!\"\n\nOnce the group is gone, The Orange Cat then thought up the plans to take the group of bullies down.\n\nWhat is The Orange Cat thinking of?",
+                choices : [
+                    ["Get the advisor's attention to stop the Black Cat Group", "wrong"],
+                    ["Setting up a trap for the Black Cat Group", "option7"],
+                    ["Take the Black Cat Group down with his own hands", "wrong"]
+                ]
+            },
+            stayput : {
+                text : "The Orange Cat is then cornered by the group, and the group engages him in a brawlout on the fields. So they took him out to the fields, and The Orange Cat was nervous in the situation he is in now, so he tries his best to take the group down. After several minutes into the fight, The Orange Cat was knocked out unconsious by the group themselves. He was taken to the nurses' office to get checked up for injuries, and has to stay home until he fully recovers.\n\nAfter he is fully recovered, he will prepare himself for the worst as he comes back to the group at lunch time.\n\nWhat would he do now?",
+                choices : [
+                    ["Confront them", "confront"],
+                    ["Do not confont them", "refuse2"]
+                ]
+            },
+            // unused Q&A variant
+            wrong : {
+                text : "Nope. Try again.",
+                choices : [
+                    ["Get the advisor's attention to stop the Black Cat Group", "wrong"],
+                    ["Setting up a trap for the Black Cat Group", "option7"],
+                    ["Take the Black Cat Group down with his own hands", "wrong"]
+                ]
+            },
+            pretendmoneyisreal : {
+                text : "\"Yeah, it is,\" The Orange Cat replied. \"That is the real money.\"\n\n\"Are you sure?\" the group asked. \"It doesn't feel like it, you know. This just feels like an ordinary play paper money that was put in this wallet.\"\n\n\"Oh, yeah,\" The Orange Cat said. \"That was my part, to lure you guys into this area.\"\n\n\"And this person right here doesn't move,\" the group responded back to him, \"This guy is a fake. This is like a large ragdoll or a life-size latex figurine.\"\n\n\"Ooookay...?\" The Orange Cat nervously asked as the group stares right at him for the final time.\n\nThe group then gave off a loud exclamation, \"YOU TRICKED US!!!\"\n\nThe now-infuriated Black Cat Group ran towards The Orange Cat as fast as they could, going near the traps that The Orange Cat has set up.\n\nThere is a pressure plate ahead! What would The Orange Cat do?",
+                choices : [
+                    ["Avoid the trap!", "null"],
+                    ["Just run!", "null"]
+                ]
+            },
+            truthmoneyisfake : {
+                text : "\"Nope!\" The Orange Cat replied. \"That right there is the fake money.\"\n\n\"Oh...so you lured us all the way to trick us, huh?\" the group asked.\n\n\"Yep! I did,\" The Orange Cat said.\n\n\"ALRIGHT!!!\" the group exclaimed, \"LET'S GET HIM!!!\"\n\n\"Uh oh,\" The Orange Cat said to himself, and the Black Cat Group ran towards The Orange Cat as fast as they could, going near the traps that The Orange Cat has set up.\n\nThere is a pressure plate ahead! What would The Orange Cat do?",
+                choices : [
+                    ["Avoid the trap!", "avoidtrap"],
+                    ["Just run!", "continuerun"]
+                ]
+            },
+            avoidtrap : {
+                text : "This right here is the option 9 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            continuerun : {
+                text : "This right here is the option 10 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
+            },
+            option1 : {
+                text : "You go to class and your day continues as normal ",
+                choices : ["four", "five", "six"]
+            },
+            option2 : {
+                text : "This right here is the option 2 thingery",
+                choices : ["seven", "eight", "nine"]
+            },
+            option3 : {
+                text : "This right here is the option 3 thingery",
+                choices : ["ten", "eleven", "twelve"]
+            },
+            option4 : {
+                text : "This right here is the option 4 thingery",
+                choices : ["thirteen", "fourteen", "fifteen"]
+            },
+            option5 : {
+                text : "This right here is the option 5 thingery",
+                choices : ["sixteen", "seventeen", "eighteen"]
+            },
+            option6 : {
+                text : "This right here is the option 6 thingery",
+                choices : ["nineteen", "twenty", "twentyone"]
+            }
+        }
+
+        // button choices
+        for(let choice of story.intro.choices) {
+            createBtn(choice, choice)
+        }
+
+// ============================================================================
+// Subroutine that creates a button from the array of choices
+// 
+// btnText - Shows the text on the button that was created
+// choice - The choices shown that are different in each part of the story
+// ============================================================================
+        function createBtn(btnText, choice) {
+            // create a button
+            let button = document.createElement
+            ("button");
+
+            // Get the text
+            button.innerHTML = btnText
+
+            // append to HTML(?)
+            btnContain.appendChild(button);
+
+            // Outputs the choice you have made after clicking the button
+            button.addEventListener ("click", function () {
+                alert("result " + choice);
+            });
+        }
+    
+
+        // function to show a story
+        function showStory(text) {
+            let storyItem = document.createElement
+            ("p");  // paragraph tag
+
+            // stores the text(?)
+            storyItem.innerText = text
+
+            // append to HTML(?)
+            storyContain.appendChild(storyItem);
+        }
+        
+        // Shows the current story
+        showStory(story.intro.text)
+
+
+        createBtn("Go to class","Your day goes as normal");
+
+
+
+    </script>
+</body>
+</html>
