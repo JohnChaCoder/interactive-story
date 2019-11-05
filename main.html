@@ -17,24 +17,25 @@
     <link rel="icon"
     type="image/png"
     href="assets/favicon.png">
+    <!-- This is for the web styling of the look and feel on the website-->
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- This is the title that shows on the browser -->
     <title>The Orange Cat and the Black Cat Group</title>
 </head>
 <body>
 
-        <!-- This is the title for the interactive story -->
-        <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
-        <p></p>
-        <!-- These buttons are just placeholders -->
-        <!--
-        <button>Not clickable yet</button>
-        <button>Not clickable yet</button>>
-        <button>Not clickable yet</button
+    <!-- This is the title for the interactive story -->
+    <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
+    <p></p>
+    <!--
+    <p class="intro">You are The Orange Cat as he begins his day at the school.</p>
+    <p></p>
+    -->
+    <p class="intro">It all began on a normal Monday morning at the elementary school...</p>
 
--->
     <!-- This displays each part of the story in these tags that are stored in the array -->
     <div id="story" class="story">
 
@@ -44,17 +45,20 @@
 
     </div>
 
-    <!-- JAVASCRIPT CODE -->
+    <!-- Everything from here on out is JavaScript code -->
     <script>
     
         // Our parts of the story in an array
         let storyContain = document.getElementById("story");
 
         // Our story context
-        storyContain.innerHTML = "The Orange Cat goes to school that morning and hears the Black Cat Group hurting the students in the hallways."
+        //storyContain.innerHTML = ""
 
         // Our buttons from the array
         let btnContain = document.getElementById("buttons");
+
+        // Start on the intro
+        let pagehist = ["intro"];
 
 // ============================================================================
 // The "story" object, which stores the different parts of the story
@@ -181,35 +185,55 @@
                     ["twentyone", "null"]
                 ]
             },
-            option1 : {
-                text : "You go to class and your day continues as normal ",
-                choices : ["four", "five", "six"]
+            option11 : {
+                text : "This right here is the option 11 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
             },
-            option2 : {
-                text : "This right here is the option 2 thingery",
-                choices : ["seven", "eight", "nine"]
+            option12 : {
+                text : "This right here is the option 12 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
             },
-            option3 : {
-                text : "This right here is the option 3 thingery",
-                choices : ["ten", "eleven", "twelve"]
+            option13 : {
+                text : "This right here is the option 13 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
             },
-            option4 : {
-                text : "This right here is the option 4 thingery",
-                choices : ["thirteen", "fourteen", "fifteen"]
+            option14 : {
+                text : "This right here is the option 14 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
             },
-            option5 : {
-                text : "This right here is the option 5 thingery",
-                choices : ["sixteen", "seventeen", "eighteen"]
+            option15 : {
+                text : "This right here is the option 15 thingery",
+                choices : [
+                    ["nineteen", "null"],
+                    ["twenty", "null"],
+                    ["twentyone", "null"]
+                ]
             },
-            option6 : {
-                text : "This right here is the option 6 thingery",
-                choices : ["nineteen", "twenty", "twentyone"]
+            finalPage : {
+                text : "This is the end of the story\nPlease refresh the page to play again",
+                choices : []
+            },
+            // A null command. Does nothing, basically.
+            null : {
+                text : "null",
+                choices : []
             }
-        }
-
-        // button choices
-        for(let choice of story.intro.choices) {
-            createBtn(choice, choice)
         }
 
 // ============================================================================
@@ -231,10 +255,11 @@
 
             // Outputs the choice you have made after clicking the button
             button.addEventListener ("click", function () {
-                alert("result " + choice);
+                pagehist.push(choice);
+                alert("You chose " + choice + ".");
+                outputStory();
             });
         }
-    
 
         // function to show a story
         function showStory(text) {
@@ -247,15 +272,46 @@
             // append to HTML(?)
             storyContain.appendChild(storyItem);
         }
+
+        // function to output the story into HTML
+        function outputStory() {
+
+            // sets the current page to the last index of the array.
+            let currentpage = pagehist[pagehist.length - 1];
+
+            // reset the story HTML and buttons
+            storyContain.innerHTML  = "";
+            btnContain.innerHTML    = "";
+            
+            // builds the story text from the array
+            for (let page of pagehist) {
+                showStory(story[page].text);
+            }
+
+            // builds the buttons for the story in the array
+            for (let choice of story[currentpage].choices) {
+                createBtn(choice[0], choice[1])
+            }
+        }
         
         // Shows the current story
-        showStory(story.intro.text)
-
-
-        createBtn("Go to class","Your day goes as normal");
-
-
+        outputStory();
 
     </script>
+
+    <p></p>
+    <button onclick="about()">About</button>
+
+    <!-- JavaScript code ahead-->
+    <script>
+    
+    function about() {
+        alert("The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story\n\nCreated and coded by GitHub users JohnChaCoder, marflo35, and KrystalV8.\n\nCreated and edited using Visual Studio Code.\n© 2019 Microsoft Corporation. All rights reserved.")
+    }
+
+    </script>
+
+    <p></p>
+    <h5 class="copyright">Site version v1.0 Beta<br>© 2019. All rights reserved.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
 </body>
 </html>
