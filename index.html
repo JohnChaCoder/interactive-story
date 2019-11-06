@@ -30,6 +30,10 @@
     <!-- This is the title for the interactive story -->
     <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
     <p></p>
+    <!--
+    <p class="intro">You are The Orange Cat as he begins his day at the school.</p>
+    <p></p>
+    -->
     <p class="intro">It all began on a normal Monday morning at the elementary school...</p>
 
     <!-- The following displays each part of the story in these tags that are stored in the array -->
@@ -68,15 +72,15 @@
         const story = {
 			// The beginning of our story
             intro : {
-                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and are formed to bully others for fun and money. Noticing this, he thought to himself how he should handle that situation.\n\nWhat would he do?",
+                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and formed together to bully others for fun and money. Noticing this, he thought to himself how he should handle that situation.\n\nWhat should he do?",
                 choices : [
-                    ["Go to class", "goclass"],
-                    ["Confront", "refuse"],
-                    ["Go home", "returnhome"]
+                    ["Go to class", "goestoclass"],
+                    ["Confront", "refuses"],
+                    ["Go home", "returnshome"]
                 ]
             },
 			// Going to class as normal
-            goclass : {
+            goestoclass : {
                 text : "He goes to class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
@@ -84,7 +88,7 @@
                 ]
             },
 			// Refuses to confront the group
-            refuse : {
+            refuses : {
                 text : "He refuses to confront them because he doesn't want to get hurt like the student that was being currently bullied by the group.\nSo he goes to his class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
@@ -92,7 +96,7 @@
                 ]
             },
 			// Just continues as normal and rests at home before returning
-            returnhome : {
+            returnshome : {
                 text : "He felt that since he does not want to get hurt, he still wanted to be friends with everyone. So he continued on his day and went home that evening.\n\nThe next day, he still sees the group bullying another student. He just continues to go to his class as normal, since he still wanted to do something about the group during lunch.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
@@ -277,6 +281,7 @@
             // Outputs the choice you have made after clicking the button
             button.addEventListener ("click", function () {
                 pagehist.push(choice);
+                alert("You chose " + choice + ".");
                 outputStory();	// adds the next arc of the story from the bottom
             });
         }
