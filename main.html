@@ -30,6 +30,10 @@
     <!-- This is the title for the interactive story -->
     <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
     <p></p>
+    <!--
+    <p class="intro">You are The Orange Cat as he begins his day at the school.</p>
+    <p></p>
+    -->
     <p class="intro">It all began on a normal Monday morning at the elementary school...</p>
 
     <!-- This displays each part of the story in these tags that are stored in the array -->
@@ -277,6 +281,7 @@
             // Outputs the choice you have made after clicking the button
             button.addEventListener ("click", function () {
                 pagehist.push(choice);
+                alert("You chose " + choice + ".");
                 outputStory();	// adds the next arc of the story from the bottom
             });
         }
