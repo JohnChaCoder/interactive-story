@@ -30,10 +30,6 @@
     <!-- This is the title for the interactive story -->
     <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
     <p></p>
-    <!--
-    <p class="intro">You are The Orange Cat as he begins his day at the school.</p>
-    <p></p>
-    -->
     <p class="intro">It all began on a normal Monday morning at the elementary school...</p>
 
     <!-- The following displays each part of the story in these tags that are stored in the array -->
@@ -72,15 +68,15 @@
         const story = {
 			// The beginning of our story
             intro : {
-                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and formed together to bully others for fun and money. Noticing this, he thought to himself how he should handle that situation.\n\nWhat should he do?",
+                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and are formed to bully others for fun and money. Noticing this, he thought to himself how he should handle that situation.\n\nWhat would he do?",
                 choices : [
-                    ["Go to class", "goestoclass"],
-                    ["Confront", "refuses"],
-                    ["Go home", "returnshome"]
+                    ["Go to class", "goclass"],
+                    ["Confront", "refuse"],
+                    ["Go home", "returnhome"]
                 ]
             },
 			// Going to class as normal
-            goestoclass : {
+            goclass : {
                 text : "He goes to class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
@@ -88,7 +84,7 @@
                 ]
             },
 			// Refuses to confront the group
-            refuses : {
+            refuse : {
                 text : "He refuses to confront them because he doesn't want to get hurt like the student that was being currently bullied by the group.\nSo he goes to his class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
@@ -96,7 +92,7 @@
                 ]
             },
 			// Just continues as normal and rests at home before returning
-            returnshome : {
+            returnhome : {
                 text : "He felt that since he does not want to get hurt, he still wanted to be friends with everyone. So he continued on his day and went home that evening.\n\nThe next day, he still sees the group bullying another student. He just continues to go to his class as normal, since he still wanted to do something about the group during lunch.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
@@ -187,23 +183,18 @@
             },
 			// Avoids the trap and gets the group
             avoidtrap : {
-                text : "This right here is the option 9 thingery",
+                text : "The Orange Cat avoids the trap he sets up, hiding into the palm tree decoration in the hallways, leaving the group to suddenly press on the well-hidden pressure plate on the ground. At the exact same moment, the heavy sandbags came out from the top of the roof, the group stopped moving, and then suddenly, BOOM! There went the Black Cat Group.\n\nNow The Orange Cat comes out from the palm tree and comes up to the group. Should he say any last words to the group?",
                 choices : [
-                    ["nineteen", "null"],
-                    ["twenty", "null"],
-                    ["twentyone", "null"]
+                    ["Yes", "advice"],
+                    ["No", "staysilent"]
                 ]
             },
 			// Gets caught in his own trap, ending the story abruptly
             continuerun : {
                 text : "This right here is the option 10 thingery",
-                choices : [
-                    ["nineteen", "null"],
-                    ["twenty", "null"],
-                    ["twentyone", "null"]
-                ]
+                choices : []
             },
-            option11 : {
+            advice : {
                 text : "This right here is the option 11 thingery",
                 choices : [
                     ["nineteen", "option12"],
@@ -211,7 +202,7 @@
                     ["twentyone", "option12"]
                 ]
             },
-            option12 : {
+            staysilent : {
                 text : "This right here is the option 12 thingery",
                 choices : [
                     ["nineteen", "option13"],
@@ -281,7 +272,6 @@
             // Outputs the choice you have made after clicking the button
             button.addEventListener ("click", function () {
                 pagehist.push(choice);
-                alert("You chose " + choice + ".");
                 outputStory();	// adds the next arc of the story from the bottom
             });
         }
