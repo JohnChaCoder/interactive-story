@@ -9,4 +9,8 @@ In this source code, you will find:
 * Some assets that the site uses
 * The ReadMe file (it is the one you are seeing now)
 * Two main HTML webpages containing most of the code (one of them is possibly used for backup)
+<<<<<<< HEAD
 * A styling sheet for the design of the webpage
+=======
+* A styling sheet for the design of the webpage
+>>>>>>> 2fb98003e60c1cd8de85bcce241988adf3771066
