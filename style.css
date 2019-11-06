@@ -44,3 +44,7 @@ body {
     margin-bottom: -22px;
     font-size: 10px;
   }
+  .imgsize {
+    height: 30%;
+    width: 30%;
+  }

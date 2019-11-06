@@ -30,6 +30,10 @@
     <!-- This is the title for the interactive story -->
     <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
     <p></p>
+    <!-- This is the image for the interactive story -->
+    <img class="imgsize" src="assets/The Orange Cat vs Black Cat Group.png" alt="The Orange Cat vs Black Cat Group">
+    <p></p>
+    <!-- This is the intro text before our main story -->
     <p class="intro">It all began on a normal Monday morning at the elementary school...</p>
 
     <!-- The following displays each part of the story in these tags that are stored in the array -->
@@ -169,16 +173,16 @@
             pretendmoneyisreal : {
                 text : "\"Yeah, it is,\" The Orange Cat replied. \"That is the real money.\"\n\n\"Are you sure?\" the group asked. \"It doesn't feel like it, you know. This just feels like an ordinary play paper money that was put in this wallet.\"\n\n\"Oh, yeah,\" The Orange Cat said. \"That was my part, to lure you guys into this area.\"\n\n\"And this person right here doesn't move,\" the group responded back to him, \"This guy is a fake. This is like a large ragdoll or a life-size latex figurine.\"\n\n\"Ooookay...?\" The Orange Cat nervously asked as the group stares right at him for the final time.\n\nThe group then gave off a loud exclamation, \"YOU TRICKED US!!!\"\n\nThe now-infuriated Black Cat Group ran towards The Orange Cat as fast as they could, going near the traps that The Orange Cat has set up.\n\nThere is a pressure plate ahead! What would The Orange Cat do?",
                 choices : [
-                    ["Avoid the trap!", "notdone"],
-                    ["Just run!", "notdone"]
+                    ["Avoid the trap!", "avoidtrap"],
+                    ["Just run!", "continuerun"]
                 ]
             },
 			// Just tells the truth that the money is fake
             truthmoneyisfake : {
                 text : "\"Nope!\" The Orange Cat replied. \"That right there is the fake money.\"\n\n\"Oh...so you lured us all the way to trick us, huh?\" the group asked.\n\n\"Yep! I did,\" The Orange Cat said.\n\n\"ALRIGHT!!!\" the group exclaimed, \"LET'S GET HIM!!!\"\n\n\"Uh oh,\" The Orange Cat said to himself, and the Black Cat Group ran towards The Orange Cat as fast as they could, going near the traps that The Orange Cat has set up.\n\nThere is a pressure plate ahead! What would The Orange Cat do?",
                 choices : [
-                    ["Avoid the trap!", "notdone"],
-                    ["Just run!", "notdone"]
+                    ["Avoid the trap!", "avoidtrap"],
+                    ["Just run!", "continuerun"]
                 ]
             },
 			// Avoids the trap and gets the group
@@ -191,39 +195,35 @@
             },
 			// Gets caught in his own trap, ending the story abruptly
             continuerun : {
-                text : "This right here is the option 10 thingery",
+                text : "The Orange Cat continues to run until he accidently pressed the well-hidden pressure plate on the ground, causing the heavy sandbags to come crashing down on him.\n\nBOOM! There went The Orange Cat.\n\nThe Black Cat Group walks up to him and teased him for his puny little trap he has set up, saying, \"What kind of an orange cat would set a trap for us like this? You did it to yourself, and pretty soon you will be out of here. We'll be seeing you very soon, loser!\"\n\nThe group laughed and walked away, leaving The Orange Cat unconsious.\n\nA few hours later, he was seen by the principal and asked, \"What in the world happened here?\"\n\n\"I don't know,\" says The Orange Cat as he wakes up from unconsiousness, \"I guess there must be something that happened here at school just recently.\"\n\n\"Are you sure?\" the principal said. \"Please tell the truth. If not then I will have to send you to the office to talk about your actions.\"\n\nThe Orange Cat then sighs and replied to him that he was the one that set up the trap for the Black Cat Group, to the principal's dismay.\n\n\"Okay, here's the truth: I was the one setting up the traps,\" he said. \"I set them up so that I can make them learn a lesson of their actions about bullying. But that plan failed when I accidently pressed that pressure plate on the ground and these sandbags were on top of me now. I'm sorry.\"\n\nThe principal then informs him that while he was glad that The Orange Cat said the truth about it, he asks him about how did he get the traps in at school, because he doesn't remember seeing them there yesterday.\n\nThe Orange Cat asks him that he set them up yesterday night while no one was at the school, just so that he can precisely get the group and confront them about their actions.\n\n\"I set up these traps up yesterday night,\" he said. \"I did it precisely so that I can get them in the right timing and place and then confront them for their actions.\"\n\nThe principal wasn't liking what The Orange Cat was saying, so he told him that while The Orange Cat got the traps in school, he did it by just breaking into the school doors secretly and then putting up the traps and leaving the school and making sure that everything stays put. So, to make sure that The Orange Cat doesn't do something like that ever again, the principal has to suspend him for a month so that everything needs to be set back to normal before The Orange Cat returns from suspension. Plus, he has to call home and notify them that The Orange Cat was doing something not appropriate at school even when it is closed.\n\nAfter school, The Orange Cat tries to cheer himself up by forgetting that the event should've never happened that way for him and that he will try to make it better next time, but by the time when he got home, his parents forced him to ask about his actions that he did at school, and The Orange Cat was in no choice but to tell the truth to his parents. After he tells the truth, his parents were outraged by his actions and subsequently punishes him from doing whatever he wants to do for five months, and is now going to be homeschooled because of his own actions.\n\nThe Orange Cat is now very, very depressed.\n\nOver the course of five months, the Black Cat Group continues to do their acts of bullying at school non-stop, while The Orange Cat has to be homeschooled and has to rethink his ways of dealing with situations from now on. After five months, he returns to school but is a completely different person from before; A cat that has no sense of bravery, justice, and responsibility to save his friends and people from the bullies, and is only focusing on his own schoolwork and classes. From this point forward, the Black Cat Group still continues to bully a number of innocent students at the school to this day, while The Orange Cat participates and attends school like an average student. The group's actions will never change, and neither The Orange Cat's way of life moving forward.\n\nGAME OVER! You didn't avoid the trap in time. Better luck next time!\nPlease refresh the page to play again",
                 choices : []
             },
             advice : {
-                text : "This right here is the option 11 thingery",
+                text : "\"Okay,\" says The Orange Cat as he comes up to the group. \"Now that I have caught you guys, I’m going to teach you all a very important lesson: You are bullying and torturing the many little, innocent, and respected students here on this campus, and you are the victims of this whole nonsense. My advice to all of you is to never treat anyone bad ever again, and always look forward to your bright sides of yourselves. And make sure to never repeat your actions that you did to those poor, innocent students ever again, it will affect yourself and your people around you. That is all for me.\" But before he can finish his sentence, he brings up a warning to the group when they didn't listen to him about what he is saying.\n\n\"And remember,\" he says, \"If you did not hear me, you will get something that will sting you!\"\n\nDid the group clearly listened to him or refused to do so?",
                 choices : [
-                    ["nineteen", "option12"],
-                    ["twenty", "option12"],
-                    ["twentyone", "option12"]
+                    ["They listened to him", "accept"],
+                    ["They did not listen to him", "didnothear"]
                 ]
             },
             staysilent : {
-                text : "This right here is the option 12 thingery",
+                text : "The Orange Cat did not say anything, other than a small \"hmph\" after seeing the group on the floor unconsious. So he walks away silently, leaving the group unconsious for the rest of the day.\n\nThe next day, he came to the school where he can see the students, teachers, advisors, and the principal gathered up near the Black Cat Group, still unconscious with the sandbags on top of them. The principal then asked, \"So whoever could had done this to these people?\"\n\nWhat would The Orange Cat do in this situation?",
                 choices : [
-                    ["nineteen", "option13"],
-                    ["twenty", "option13"],
-                    ["twentyone", "option13"]
+                    ["Respond", "notdone"],
+                    ["Do not respond", "notdone"]
                 ]
             },
-            option13 : {
-                text : "This right here is the option 13 thingery",
+            accept : {
+                text : "The Black Cat Group listened to him, responding, weakly, \"Okay… We’ll be good from now on… We’ll make sure that we treat each other nicely… And we’ll be sure to never repeat our actions that we did the past five years…\"\n\n\"Thank you,\" The Orange Cat says to the group, and walks away silently, leaving the group unconsious for the rest of the day.\n\nThe next day, he came to the school where he can see the students, teachers, advisors, and the principal gathered up near the Black Cat Group, still unconscious with the sandbags on top of them. The principal then asked, \"So whoever could had done this to these people?\"\n\nWhat would The Orange Cat do in this situation?",
                 choices : [
-                    ["nineteen", "option14"],
-                    ["twenty", "option14"],
-                    ["twentyone", "option14"]
+                    ["Respond", "notdone"],
+                    ["Do not respond", "notdone"]
                 ]
             },
-            option14 : {
-                text : "This right here is the option 14 thingery",
+            didnothear : {
+                text : "The Black Cat Group refused to listen to him as they cannot accept defeat, saying, \"We cannot be taken down like this, we will still do our actions like we did before for the money, and we will be richer than you once we leave this school, The Orange Cat...\"\n\nAt this point, the group's refusal to accept defeat bugs The Orange Cat, and so he takes out a pepper spray from his pocket and sprays it out on the group, stinging them from talking and moving even further.\n\n\"IT BURNS!!! IT BURNS!!!\" screamed the group as their eyes started to burn up.\n\n\"Now,\" says The Orange Cat, \"Do you see what I mean?\"\n\n\"Yes...\" the group responds to him, weakly, \"We’ll be good from now on… We’ll make sure that we treat each other nicely… And we’ll be sure to never repeat our actions that we did the past five years…\"\n\n\"Thank you,\" The Orange Cat says to the group, and walks away silently, leaving the group unconsious for the rest of the day.\n\nThe next day, he came to the school where he can see the students, teachers, advisors, and the principal gathered up near the Black Cat Group, still unconscious with the sandbags on top of them. The principal then asked, \"So whoever could had done this to these people?\"\n\nWhat would The Orange Cat do in this situation?",
                 choices : [
-                    ["nineteen", "option15"],
-                    ["twenty", "option15"],
-                    ["twentyone", "option15"]
+                    ["Respond", "notdone"],
+                    ["Do not respond", "notdone"]
                 ]
             },
             option15 : {
@@ -328,6 +328,6 @@
     </script>
 
     <p></p>
-    <h5 class="copyright">Site version v1.0 Beta<br>© 2019. All rights reserved.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
+    <h5 class="copyright">Site version v1.0 Beta 2<br>© 2019. All rights reserved.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
 </body>
 </html>
