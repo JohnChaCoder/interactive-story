@@ -30,13 +30,13 @@
     <!-- This is the title for the interactive story -->
     <h1 class="Title">The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story</h1>
     <p></p>
-    <!--
-    <p class="intro">You are The Orange Cat as he begins his day at the school.</p>
+    <!-- This is the image for the interactive story -->
+    <img class="imgsize" src="assets/The Orange Cat vs Black Cat Group.png" alt="The Orange Cat vs Black Cat Group">
     <p></p>
-    -->
+    <!-- This is the intro text before our main story -->
     <p class="intro">It all began on a normal Monday morning at the elementary school...</p>
 
-    <!-- This displays each part of the story in these tags that are stored in the array -->
+    <!-- The following displays each part of the story in these tags that are stored in the array -->
 	
 	<!-- This displays our story -->
     <div id="story" class="story">
@@ -72,32 +72,41 @@
         const story = {
 			// The beginning of our story
             intro : {
-                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and formed together to bully others for fun and money. Noticing this, he thought to himself how he should handle that situation.\n\nWhat should he do?",
+                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and are formed to bully others for fun and money.\n\n\"WHERE'S THE MONEY?!\" the group asked to the innocent student they were bullying.\n\n\"I'm sorry,\" asked the innocent student, \"I don't have any money in my wallet!\"\n\n\"Well, if you don't have any money, how about you deserve a beating?\" the group replied.\n\n\"Uhhhh...\" the innocent student was unable to say anything.\n\nThe group then responded, \"Okay, there is no answer. Guys, let's beat him up!\" They then attacked the innocent child violently underneath the puff smokes, until the student couldn't move anymore.\n\n\"Well, next time, bring the money to us, or else you will deserve another beating from us!\" the group said to the innocent student about how he should have money in his pocket. \"See you later, twerp!\" The group then leaves the scene, leaving the innocent student there on the floor unconsious.\n\nNoticing this, he thought to himself how he should handle that situation. What would he do?",
                 choices : [
-                    ["Go to class", "goestoclass"],
-                    ["Confront", "refuses"],
-                    ["Go home", "returnshome"]
+                    ["Go to class", "goclass"],
+                    ["Confront", "refuse"],
+                    ["Get help", "refusetohelp"],
+                    ["Go home", "returnhome"]
                 ]
             },
 			// Going to class as normal
-            goestoclass : {
-                text : "He goes to class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
+            goclass : {
+                text : "He then goes to his class and his day continues on as normal.\n\n\"Those guys did not treat that student very nicely,\" he told himself while walking. \"I must do something about it at lunch.\"\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
                     ["Do not confont them", "refuse2"]
                 ]
             },
 			// Refuses to confront the group
-            refuses : {
+            refuse : {
                 text : "He refuses to confront them because he doesn't want to get hurt like the student that was being currently bullied by the group.\nSo he goes to his class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
                     ["Do not confont them", "refuse2"]
                 ]
             },
+			// Refuses to help the student because he doesn't have time
+            refusetohelp : {
+                text : "He refuses to help the innocent student because he doesn't have any time to do so. He has to be at class before it starts.\nSo he goes to his class and his day continues on as normal.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
+                choices : [
+                    ["Confront them", "confront"],
+                    ["Do not confont them", "refuse2"]
+                ]
+            },
 			// Just continues as normal and rests at home before returning
-            returnshome : {
-                text : "He felt that since he does not want to get hurt, he still wanted to be friends with everyone. So he continued on his day and went home that evening.\n\nThe next day, he still sees the group bullying another student. He just continues to go to his class as normal, since he still wanted to do something about the group during lunch.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
+            returnhome : {
+                text : "He felt that since he does not want to get hurt, he still wanted to be friends with everyone. So he continued on his day and went home that evening.\n\nThe next day, he still sees the group bullying another student. He just continues to go to his class as normal, since he still wanted to do something about the group during lunch.\n\n\"I must find a way to do something about that group at lunch,\" he asked to himself.\n\nLunch time. The Orange Cat then sees the group again.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
                     ["Do not confont them", "refuse2"]
@@ -173,79 +182,116 @@
             pretendmoneyisreal : {
                 text : "\"Yeah, it is,\" The Orange Cat replied. \"That is the real money.\"\n\n\"Are you sure?\" the group asked. \"It doesn't feel like it, you know. This just feels like an ordinary play paper money that was put in this wallet.\"\n\n\"Oh, yeah,\" The Orange Cat said. \"That was my part, to lure you guys into this area.\"\n\n\"And this person right here doesn't move,\" the group responded back to him, \"This guy is a fake. This is like a large ragdoll or a life-size latex figurine.\"\n\n\"Ooookay...?\" The Orange Cat nervously asked as the group stares right at him for the final time.\n\nThe group then gave off a loud exclamation, \"YOU TRICKED US!!!\"\n\nThe now-infuriated Black Cat Group ran towards The Orange Cat as fast as they could, going near the traps that The Orange Cat has set up.\n\nThere is a pressure plate ahead! What would The Orange Cat do?",
                 choices : [
-                    ["Avoid the trap!", "notdone"],
-                    ["Just run!", "notdone"]
+                    ["Avoid the trap!", "avoidtrap"],
+                    ["Just run!", "continuerun"]
                 ]
             },
 			// Just tells the truth that the money is fake
             truthmoneyisfake : {
                 text : "\"Nope!\" The Orange Cat replied. \"That right there is the fake money.\"\n\n\"Oh...so you lured us all the way to trick us, huh?\" the group asked.\n\n\"Yep! I did,\" The Orange Cat said.\n\n\"ALRIGHT!!!\" the group exclaimed, \"LET'S GET HIM!!!\"\n\n\"Uh oh,\" The Orange Cat said to himself, and the Black Cat Group ran towards The Orange Cat as fast as they could, going near the traps that The Orange Cat has set up.\n\nThere is a pressure plate ahead! What would The Orange Cat do?",
                 choices : [
-                    ["Avoid the trap!", "notdone"],
-                    ["Just run!", "notdone"]
+                    ["Avoid the trap!", "avoidtrap"],
+                    ["Just run!", "continuerun"]
                 ]
             },
 			// Avoids the trap and gets the group
             avoidtrap : {
-                text : "This right here is the option 9 thingery",
+                text : "The Orange Cat avoids the trap he sets up, hiding into the palm tree decoration in the hallways, leaving the group to suddenly press on the well-hidden pressure plate on the ground. At the exact same moment, the heavy sandbags came out from the top of the roof, the group stopped moving, and then suddenly, BOOM! There went the Black Cat Group.\n\nNow The Orange Cat comes out from the palm tree and comes up to the group. Should he say any last words to the group?",
                 choices : [
-                    ["nineteen", "null"],
-                    ["twenty", "null"],
-                    ["twentyone", "null"]
+                    ["Yes", "advice"],
+                    ["No", "staysilent"]
                 ]
             },
 			// Gets caught in his own trap, ending the story abruptly
             continuerun : {
-                text : "This right here is the option 10 thingery",
+                text : "The Orange Cat continues to run until he accidently pressed the well-hidden pressure plate on the ground, causing the heavy sandbags to come crashing down on him.\n\nBOOM! There went The Orange Cat.\n\nThe Black Cat Group walks up to him and teased him for his puny little trap he has set up, saying, \"What kind of an orange cat would set a trap for us like this? You did it to yourself, and pretty soon you will be out of here. We'll be seeing you very soon, loser!\"\n\nThe group laughed and walked away, leaving The Orange Cat unconsious.\n\nA few hours later, he was seen by the principal and asked, \"What in the world happened here?\"\n\n\"I don't know,\" says The Orange Cat as he wakes up from unconsiousness, \"I guess there must be something that happened here at school just recently.\"\n\n\"Are you sure?\" the principal said. \"Please tell the truth. If not then I will have to send you to the office to talk about your actions.\"\n\nThe Orange Cat then sighs and replied to him that he was the one that set up the trap for the Black Cat Group, to the principal's dismay.\n\n\"Okay, here's the truth: I was the one setting up the traps,\" he said. \"I set them up so that I can make them learn a lesson of their actions about bullying. But that plan failed when I accidently pressed that pressure plate on the ground and these sandbags were on top of me now. I'm sorry.\"\n\nThe principal then informs him that while he was glad that The Orange Cat said the truth about it, he asks him about how did he get the traps in at school, because he doesn't remember seeing them there yesterday.\n\nThe Orange Cat asks him that he set them up yesterday night while no one was at the school, just so that he can precisely get the group and confront them about their actions.\n\n\"I set up these traps up yesterday night,\" he said. \"I did it precisely so that I can get them in the right timing and place and then confront them for their actions.\"\n\nThe principal wasn't liking what The Orange Cat was saying, so he told him that while The Orange Cat got the traps in school, he did it by just breaking into the school doors secretly and then putting up the traps and leaving the school and making sure that everything stays put. So, to make sure that The Orange Cat doesn't do something like that ever again, the principal has to suspend him for a month so that everything needs to be set back to normal before The Orange Cat returns from suspension. Plus, he has to call home and notify them that The Orange Cat was doing something not appropriate at school even when it is closed.\n\nAfter school, The Orange Cat tries to cheer himself up by forgetting that the event should've never happened that way for him and that he will try to make it better next time, but by the time when he got home, his parents forced him to ask about his actions that he did at school, and The Orange Cat was in no choice but to tell the truth to his parents. After he tells the truth, his parents were outraged by his actions and subsequently punishes him from doing whatever he wants to do for five months, and is now going to be homeschooled because of his own actions.\n\nThe Orange Cat is now very, very depressed.\n\nOver the course of five months, the Black Cat Group continues to do their acts of bullying at school non-stop, while The Orange Cat has to be homeschooled and has to rethink his ways of dealing with situations from now on. After five months, he returns to school but is a completely different person from before; A cat that has no sense of bravery, justice, and responsibility to save his friends and people from the bullies, and is only focusing on his own schoolwork and classes. From this point forward, the Black Cat Group still continues to bully a number of innocent students at the school to this day, while The Orange Cat participates and attends school like an average student. The group's actions will never change, and neither The Orange Cat's way of life moving forward.\n\nGAME OVER! You didn't avoid the trap in time. Better luck next time!\nPlease refresh the page to play again",
+                choices : []
+            },
+            // asks the group some advice
+            advice : {
+                text : "\"Okay,\" says The Orange Cat as he comes up to the group. \"Now that I have caught you guys, I'm going to teach you all a very important lesson: You are bullying and torturing the many little, innocent, and respected students here on this campus, and you are the victims of this whole nonsense. My advice to all of you is to never treat anyone bad ever again, and always look forward to your bright sides of yourselves. And make sure to never repeat your actions that you did to those poor, innocent students ever again, it will affect yourself and your people around you. That is all for me.\" But before he can finish his sentence, he brings up a warning to the group when they didn't listen to him about what he is saying.\n\n\"And remember,\" he says, \"If you did not hear me, you will get something that will sting you!\"\n\nDid the group clearly listened to him or refused to do so?",
                 choices : [
-                    ["nineteen", "null"],
-                    ["twenty", "null"],
-                    ["twentyone", "null"]
+                    ["They listened to him", "accept"],
+                    ["They did not listen to him", "didnothear"]
                 ]
             },
-            option11 : {
-                text : "This right here is the option 11 thingery",
+            // he stays silent and walks away
+            staysilent : {
+                text : "The Orange Cat did not say anything, other than a small \"hmph\" after seeing the group on the floor unconsious. So he walks away silently, leaving the group unconsious for the rest of the day.\n\nThe next day, he came to the school where he can see the students, teachers, advisors, and the principal gathered up near the Black Cat Group, still unconscious with the sandbags on top of them. The principal then asked, \"So whoever could had done this to these people?\"\n\nWhat would The Orange Cat do in this situation?",
                 choices : [
-                    ["nineteen", "option12"],
-                    ["twenty", "option12"],
-                    ["twentyone", "option12"]
+                    ["Respond", "respond"],
+                    ["Do not respond", "donotrespond"]
                 ]
             },
-            option12 : {
-                text : "This right here is the option 12 thingery",
+            // the group accepted what The Orange Cat is saying
+            accept : {
+                text : "The Black Cat Group listened to him, responding, weakly, \"Okay… We'll be good from now on… We'll make sure that we treat each other nicely… And we'll be sure to never repeat our actions that we did the past five years…\"\n\n\"Thank you,\" The Orange Cat says to the group, and walks away silently, leaving the group unconsious for the rest of the day.\n\nThe next day, he came to the school where he can see the students, teachers, advisors, and the principal gathered up near the Black Cat Group, still unconscious with the sandbags on top of them. The principal then asked, \"So whoever could had done this to these people?\"\n\nWhat would The Orange Cat do in this situation?",
                 choices : [
-                    ["nineteen", "option13"],
-                    ["twenty", "option13"],
-                    ["twentyone", "option13"]
+                    ["Respond", "respond"],
+                    ["Do not respond", "donotrespond"]
                 ]
             },
-            option13 : {
-                text : "This right here is the option 13 thingery",
+            // the group did not accept what The Orange Cat is saying and gets pepper-sprayed
+            didnothear : {
+                text : "The Black Cat Group refused to listen to him as they cannot accept defeat, saying, \"We cannot be taken down like this, we will still do our actions like we did before for the money, and we will be richer than you once we leave this school, The Orange Cat...\"\n\nAt this point, the group's refusal to accept defeat bugs The Orange Cat, and so he takes out a pepper spray from his pocket and sprays it out on the group, stinging them from talking and moving even further.\n\n\"IT BURNS!!! IT BURNS!!!\" screamed the group as their eyes started to burn up.\n\n\"Now,\" says The Orange Cat, \"Do you see what I mean?\"\n\n\"Yes...\" the group responds to him, weakly, \"We'll be good from now on… We'll make sure that we treat each other nicely… And we'll be sure to never repeat our actions that we did the past five years…\"\n\n\"Thank you,\" The Orange Cat says to the group, and walks away silently, leaving the group unconsious for the rest of the day.\n\nThe next day, he came to the school where he can see the students, teachers, advisors, and the principal gathered up near the Black Cat Group, still unconscious with the sandbags on top of them. The principal then asked, \"So whoever could had done this to these people?\"\n\nWhat would The Orange Cat do in this situation?",
                 choices : [
-                    ["nineteen", "option14"],
-                    ["twenty", "option14"],
-                    ["twentyone", "option14"]
+                    ["Respond", "respond"],
+                    ["Do not respond", "donotrespond"]
                 ]
             },
-            option14 : {
-                text : "This right here is the option 14 thingery",
+            // asks the principal that he did it to let the group know their own consequences
+            respond : {
+                text : "The Orange Cat decides to take the risk of saying that he did it to the group.\n\n\"I did,\" replied The Orange Cat, \"I had to do it to let them know about their consequences of their actions.\"\n\n\"You did?\" asked the principal, \"Why would you do that?\"\n\nDid The Orange Cat tell the truth to him?",
                 choices : [
-                    ["nineteen", "option15"],
-                    ["twenty", "option15"],
-                    ["twentyone", "option15"]
+                    ["Yes", "repliedyestotruth"],
+                    ["No", "repliednototruth"]
                 ]
             },
-            option15 : {
-                text : "This right here is the option 15 thingery",
+            // did not respond, leading to The Orange Cat's suspension from school for five months and coming back as a completely different person, ending the story abruptly
+            donotrespond : {
+                text : "The Orange Cat did not respond.\n\n\"Okay then,\" the principal said, \"Let's leave our investigation to us. Whoever could've done this would serve a suspension from school for five months to let them know of their actions.\"\n\nThe students and teachers leave the scene except for The Orange Cat, leaving the advisors and the principal to take care of the sandbags and waking up the group from unconsiousness.\n\n\"What has happened to you guys?\" the principal said.\n\n\"It was The Orange Cat,\" says the group. \"He set up the trap to take us down and change us for the good.\"\n\n\"Him?\" the principal replied, as he looks back to see The Orange Cat standing shyly in the hallways.\n\n\"Yeah,\" the group said. \"He did it.\"\n\nThe principal comes up to The Orange Cat and said, \"Can you tell me what happened here?\"\n\n\"I don't know,\" says The Orange Cat, \"I guess there must be something that happened here at school just recently.\"\n\n\"Are you sure?\" the principal said. \"Please tell the truth. If not then I will have to send you to the office to talk about your actions.\"\n\nThe Orange Cat then sighs and replied to him that he was the one that set up the trap for the Black Cat Group, to the principal's dismay.\n\n\"Okay, here's the truth: I was the one setting up the traps,\" he said. \"I set them up so that I can make them learn a lesson of their actions about bullying. But that plan failed when I accidently pressed that pressure plate on the ground and these sandbags were on top of me now. I'm sorry.\"\n\nThe principal then informs him that while he was glad that The Orange Cat said the truth about it, he asks him about how did he get the traps in at school, because he doesn't remember seeing them there yesterday.\n\nThe Orange Cat asks him that he set them up yesterday night while no one was at the school, just so that he can precisely get the group and confront them about their actions.\n\n\"I set up these traps up yesterday night,\" he said. \"I did it precisely so that I can get them in the right timing and place and then confront them for their actions.\"\n\nThe principal wasn't liking what The Orange Cat was saying, so he told him that while The Orange Cat got the traps in school, he did it by just breaking into the school doors secretly and then putting up the traps and leaving the school and making sure that everything stays put. So, to make sure that The Orange Cat doesn't do something like that ever again, the principal has to suspend him for a month so that everything needs to be set back to normal before The Orange Cat returns from suspension. Plus, he has to call home and notify them that The Orange Cat was doing something not appropriate at school even when it is closed. At that momemt, the Black Cat Group was completely recovered from unconsiousness, not feeling weakened anymore.\n\n\"Alright,\" the group said, quietly to themselves, \"Once The Orange Cat is no longer in school, we will continue to do our things like we want to do for the money!\"\n\n\"What did I just hear?\" the principal responded as he overheard the group's conversation.\n\n\"Nothing,\" says the group as they continue to act like they're already down.\n\nAfter school, The Orange Cat tries to cheer himself up by forgetting that the event should've never happened that way for him and that he will try to make it better next time, but by the time when he got home, his parents forced him to ask about his actions that he did at school, and The Orange Cat was in no choice but to tell the truth to his parents. After he tells the truth, his parents were outraged by his actions and subsequently punishes him from doing whatever he wants to do for five months, and is now going to be homeschooled because of his own actions.\n\nThe Orange Cat is now very, very depressed.\n\nAt the exact same moment, the Black Cat Group was hiding over the fences of The Orange Cat's house, seeing The Orange Cat feeling very depressed with their binoculars.\n\n\"Alright guys,\" the group said, \"We've finally got down The Orange Cat! Now we can have fun and get people for the money and for our entertainment!\"\n\nOver the course of five months, the Black Cat Group continues to do their acts of bullying at school non-stop, while The Orange Cat has to be homeschooled and has to rethink his ways of dealing with situations from now on. After five months, he returns to school but is a completely different person from before; A cat that has no sense of bravery, justice, and responsibility to save his friends and people from the bullies, and is only focusing on his own schoolwork and classes. From this point forward, the Black Cat Group still continues to bully a number of innocent students at the school to this day, while The Orange Cat participates and attends school like an average student. The group's actions will never change, and neither The Orange Cat's way of life moving forward.\n\nGAME OVER! You did not respond to the principal at the right time. Better luck next time!\nPlease refresh the page to play again",
+                choices : []
+            },
+            // replied to the prinicpal the real reason why he did it, leading to the selection of three possible endings
+            repliedyes : {
+                text : "\"I did it to end the bullying here at school that has been around for five years,\" The Orange Cat replied.\n\n\"Oh!\" the principal responded, \"So that's why you took them down like this, to end bullying here at our school!\"\n\n\"Yep!\" The Orange Cat replied.\n\n\"Hear that, everyone?\" the principal said to his students, teachers, and advisors, \"This student, The Orange Cat, has taken down the Black Cat Group to stop their acts of bullying in our school! Let's give him a round of applause for this brave and kind-hearted student!\"\n\nEveryone applauded and cheered for The Orange Cat.\n\nThe group then wakes up from unconsciousness, removed the sandbags on top of them, and wondered what is happening around them, saying, \"What in the world is going on around here?\"\n\nThe principal notices the group and asks, \"I know what you did to all of you guys, and I know what you did to our students at our school, especially your actions as a group consisting of solely bullying other people.\n\n\"Now,\" the principal said, \"You got to make sure that you will never do any of your actions that you did as a group ever again, or I'm going to have to expel you from this campus permanently. Got it?\"\n\n\"Yes, sir,\" the group replies.\n\nLater that day, The Orange Cat walked up to the hallways to see the Black Cat Group kindfully giving back the cash they stole to the students they used to bully as a group, making The Orange Cat feel proud of himself. The Black Cat Group had now gone from being a bullying group into a respectful and kind-hearted group that helps the school community.\n\nThe elementary school that The Orange Cat has been in is now free of bullies that plagued the school for five years, and now has bullying monitors and advisors around the school monitoring for any kind of bullying happening around the school. One day, The Orange Cat saw a small group of new bullies secretly attacking and teasing one student in the corners of the hallways, but the advisors in the hallways were quick enough to go to that small group and suspend them from being in the school for two weeks. The Orange Cat knew everything worked out after that day, and at that moment, he walked up to the hall of fame and saw his name in one of the plaques that the principal had set up. He was honored as a hero of anti-bullying, making him more proud than he thinks.\n\nDo The Orange Cat and the Black Cat Group go out together for anti-bullying events?",
                 choices : [
-                    ["nineteen", "finalPage"],
-                    ["twenty", "finalPage"],
-                    ["twentyone", "finalPage"]
+                    ["Yes", "finalPageTrue"],
+                    ["Maybe", "finalPageAlt1"],
+                    ["No", "finalPageAlt2"]
                 ]
             },
-			// The final page.
-            finalPage : {
-                text : "This is the end of the story\nPlease refresh the page to play again",
+            // did not respond, leading to The Orange Cat's suspension from school for five months and coming back as a completely different person, ending the story abruptly
+            repliedno : {
+                text : "The Orange Cat did not say anything after that.\n\n\"Nothing?\" the principal said. \"Okay, but I don't remember seeing these traps here yesterday.\"\n\n\"Oh, I set up these traps up yesterday night,\" he said. \"I did it precisely so that I can get them in the right timing and place and then confront them for their actions. And while I did that, I had to break open the doors to the school and secretly place them so that no one can see them.\"\n\nThe principal wasn't liking what The Orange Cat was saying, so to make sure that The Orange Cat doesn't do something like that ever again, the principal has to suspend him for a month so that everything needs to be set back to normal before The Orange Cat returns from suspension. Plus, he has to call home and notify them that The Orange Cat was doing something not appropriate at school even when it is closed. At that momemt, the Black Cat Group was completely recovered from unconsiousness, not feeling weakened anymore.\n\n\"Alright,\" the group said, quietly to themselves, \"Once The Orange Cat is no longer in school, we will continue to do our things like we want to do for the money!\"\n\n\"What did I just hear?\" the principal responded as he overheard the group's conversation.\n\n\"Nothing,\" says the group as they continue to act like they're already down.\n\nAfter school, The Orange Cat tries to cheer himself up by forgetting that the event should've never happened that way for him and that he will try to make it better next time, but by the time when he got home, his parents forced him to ask about his actions that he did at school, and The Orange Cat was in no choice but to tell the truth to his parents. After he tells the truth, his parents were outraged by his actions and subsequently punishes him from doing whatever he wants to do for five months, and is now going to be homeschooled because of his own actions.\n\nThe Orange Cat is now very, very depressed.\n\nAt the exact same moment, the Black Cat Group was hiding over the fences of The Orange Cat's house, seeing The Orange Cat feeling very depressed with their binoculars.\n\n\"Alright guys,\" the group said, \"We've finally got down The Orange Cat! Now we can have fun and get people for the money and for our entertainment!\"\n\nOver the course of five months, the Black Cat Group continues to do their acts of bullying at school non-stop, while The Orange Cat has to be homeschooled and has to rethink his ways of dealing with situations from now on. After five months, he returns to school but is a completely different person from before; A cat that has no sense of bravery, justice, and responsibility to save his friends and people from the bullies, and is only focusing on his own schoolwork and classes. From this point forward, the Black Cat Group still continues to bully a number of innocent students at the school to this day, while The Orange Cat participates and attends school like an average student. The group's actions will never change, and neither The Orange Cat's way of life moving forward.\n\nGAME OVER! You did not respond to the principal at the right time. Better luck next time!\nPlease refresh the page to play again",
+                choices : []
+            },
+            // tells the truth to the principal, whom asks for the real reason
+            repliedyestotruth : {
+                text : "The Orange Cat then tells the truth to the principal.\n\n\"I did it because they were bullying, teasing, and disrespecting the students here at the school, and I had to step in and end it once and for all, so that they will never have to do the things that they used to ever again,\" says The Orange Cat.\n\n\"Really?\" the principal said. \"What was your reason behind all of this?\"\n\nDid The Orange Cat say the real reason why he done that to the group?",
+                choices : [
+                    ["Yes", "repliedyes"],
+                    ["No", "repliedno"]
+                ]
+            },
+            // did not respond, leading to The Orange Cat's suspension from school for five months and coming back as a completely different person, ending the story abruptly
+            repliednototruth : {
+                text : "The Orange Cat did not say anything after that.\n\n\"Nothing?\" the principal said. \"Okay, but I don't remember seeing these traps here yesterday.\"\n\n\"Oh, I set up these traps up yesterday night,\" he said. \"I did it precisely so that I can get them in the right timing and place and then confront them for their actions. And while I did that, I had to break open the doors to the school and secretly place them so that no one can see them.\"\n\nThe principal wasn't liking what The Orange Cat was saying, so to make sure that The Orange Cat doesn't do something like that ever again, the principal has to suspend him for a month so that everything needs to be set back to normal before The Orange Cat returns from suspension. Plus, he has to call home and notify them that The Orange Cat was doing something not appropriate at school even when it is closed. At that momemt, the Black Cat Group was completely recovered from unconsiousness, not feeling weakened anymore.\n\n\"Alright,\" the group said, quietly to themselves, \"Once The Orange Cat is no longer in school, we will continue to do our things like we want to do for the money!\"\n\n\"What did I just hear?\" the principal responded as he overheard the group's conversation.\n\n\"Nothing,\" says the group as they continue to act like they're already down.\n\nAfter school, The Orange Cat tries to cheer himself up by forgetting that the event should've never happened that way for him and that he will try to make it better next time, but by the time when he got home, his parents forced him to ask about his actions that he did at school, and The Orange Cat was in no choice but to tell the truth to his parents. After he tells the truth, his parents were outraged by his actions and subsequently punishes him from doing whatever he wants to do for five months, and is now going to be homeschooled because of his own actions.\n\nThe Orange Cat is now very, very depressed.\n\nAt the exact same moment, the Black Cat Group was hiding over the fences of The Orange Cat's house, seeing The Orange Cat feeling very depressed with their binoculars.\n\n\"Alright guys,\" the group said, \"We've finally got down The Orange Cat! Now we can have fun and get people for the money and for our entertainment!\"\n\nOver the course of five months, the Black Cat Group continues to do their acts of bullying at school non-stop, while The Orange Cat has to be homeschooled and has to rethink his ways of dealing with situations from now on. After five months, he returns to school but is a completely different person from before; A cat that has no sense of bravery, justice, and responsibility to save his friends and people from the bullies, and is only focusing on his own schoolwork and classes. From this point forward, the Black Cat Group still continues to bully a number of innocent students at the school to this day, while The Orange Cat participates and attends school like an average student. The group's actions will never change, and neither The Orange Cat's way of life moving forward.\n\nGAME OVER! You did not respond to the principal at the right time. Better luck next time!\nPlease refresh the page to play again",
+                choices : []
+            },
+			// The final part of the story and a conclusion. (True Ending)
+            finalPageTrue : {
+                text : "The Orange Cat and the Black Cat Group participated in several anti-bullying events and programs in the school, bringing The Orange Cat and the Black Cat Group closely related to them and became close friends with them. What was considered enemies to the group are now considered kind-hearted friends to them, thanks to The Orange Cat. On the day of The Orange Cat's graduation from grade school, he was given a special plaque for his anti-bullying actions that he did to influence the anti-bully programs and events at the school, as well as giving him and the Black Cat Group medallions honoring them for participating in the anti-bullying programs and events throughout the years.\n\nYears later, The Orange Cat and the Black Cat Group came back to the elementary school they used to go to as guest speakers of anti-bullying during the rallies and assemblies at the school. The two even formed an anti-bullying organization called “The Orange and Black Cat Group of Anti-Bullying”, which aims to cover every single aspect of the negative consequences of bullying, and how to stop bullying once and for all. Their legacy of anti-bullying continues to influence other people at their elementary school and their hometown, as well as the whole world.\n\nAnd that is how both The Orange Cat and the Black Cat Group got famous and notable for their anti-bullying measures and methods since that day.\n\nTHE END\n\nThis is the end of the story\nPlease refresh the page to play again",
+                choices : []
+            },
+			// The final part of the story and a conclusion. (Ending Alternative 1)
+            finalPageAlt1 : {
+                text : "The Orange Cat and the Black Cat Group participated in some anti-bullying events and programs in the school, but it is not bringing The Orange Cat and the Black Cat Group closely related to them and becoming close friends with them in the process. After the graduation of both The Orange Cat and the Black Cat Group, the two of them had made a decision to split off to their seperate ways, because of other things the two of them had in their own lives.\n\nThe Orange Cat and the Black Cat Group never see each other again, and because of that, they did not have any time to form an organization dedicated to anti-bullying, and they may not come back to the school they used to go as guest speakers. But, however, they are still honored in special plaques at the elementary school the two of them used to go to, for their actions of anti-bullying, so not all hope has been lost.\n\nAnd since then, the two of them had their own seperate organizations dedicated to anti-bullying based on their experiences in the past years.\n\nTHE END\n\nThis is the end of the story\nPlease refresh the page to play again",
+                choices : []
+            },
+			// The final part of the story and a conclusion. (Ending Alternative 2)
+            finalPageAlt2 : {
+                text : "The Orange Cat and the Black Cat Group agreed to split off to their own seperate ways, so they do not participate in any kind of event or program dedicated to anti-bullying. They are also not close friends with each other, and are not closely related to either one of them in any way possible. After the graduation of both The Orange Cat and the Black Cat Group, they continue to go out on their own seperate ways, never seeing each other again for a long time.\n\nThe two of them never formed an organization dedicated to anti-bullying together, and they did not come back to the school they used to go as guest speakers. But, however, they are still honored in special plaques at the elementary school the two of them used to go to, for their actions of anti-bullying, so not all hope has been lost.\n\nAnd since then, the two of them had their own seperate organizations dedicated to anti-bullying based on their experiences in the past years.\n\nTHE END\n\nThis is the end of the story\nPlease refresh the page to play again",
                 choices : []
             },
             // A null command. Does nothing, basically.
@@ -281,7 +327,6 @@
             // Outputs the choice you have made after clicking the button
             button.addEventListener ("click", function () {
                 pagehist.push(choice);
-                alert("You chose " + choice + ".");
                 outputStory();	// adds the next arc of the story from the bottom
             });
         }
@@ -330,6 +375,7 @@
     <!-- JavaScript code ahead-->
     <script>
     
+    // Shows the info of the site
     function about() {
         alert("The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story\n\nCreated and coded by GitHub users JohnChaCoder, marflo35, and KrystalV8.\n\nCreated and edited using Visual Studio Code.\n© 2019 Microsoft Corporation. All rights reserved.")
     }
@@ -337,6 +383,6 @@
     </script>
 
     <p></p>
-    <h5 class="copyright">Site version v1.0 Beta<br>© 2019. All rights reserved.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
+    <h5 class="copyright">Site version v1.0 RC1<br>© 2019. All rights reserved.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
 </body>
 </html>
