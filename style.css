@@ -9,8 +9,10 @@ body {
   }
   p {
     color: black;
-    font-family: inherit;
+    font-family: Tw Cen MT;
     text-align: left;
+    animation-name: fadefrom3;
+    animation-duration: 2s;
   }
   h1 {
     font-weight: bold;
@@ -20,7 +22,7 @@ body {
     color: orange;
     text-shadow: 2px 2px black;
     font-size: 28px;
-    font-family: cursive;
+    font-family: Comic Sans MS;
     animation-name: fadefrom2;
     animation-duration: 2s;
   }
@@ -43,4 +45,14 @@ body {
     font-family: Tahoma;
     margin-bottom: -22px;
     font-size: 10px;
+  }
+  .imgsize {
+    height: 30%;
+    width: 30%;
+    animation-name: fadeinimg;
+    animation-duration: 2s;
+  }
+  @keyframes fadeinimg {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
   }
