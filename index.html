@@ -112,20 +112,20 @@
                     ["Do not confont them", "refuse2"]
                 ]
             },
-			// Confront the Black Cat Group
-            confront : {
-                text : "He goes up to the group and asks, \"Why are you doing this to the student?\"\n\n\"Well,\" the group said, \"We got him for the money we're looking for. And since he doesn't want his stuff to get stolen, we just had to do our job like we should.\"\n\n\"What did you actually do to him?\" The Orange Cat asked, \"Tell me more about it.\"\n\n\"Okay then,\" the group replied, \"We've actually threatened them by saying to him that if he declines to accept our offer, then he will deserve a beating. And since he declined to do so, we just have to beat him up. No exceptions.\"\n\nThe Orange Cat was furious. \"No, I do not like this,\" he said. \"If you ever try to do that ever again, I'm going to call the teacher or principal to come and get you guys for your actions, for what you have done to this innocent student.\"\n\n\"Oh, you want to expose us as bullies, solely?\" the group said. \"You can say that one more time and we will fight you out in the field, right outside the school.\"\n\nShould he take the risk of confronting them one more time?",
-                choices : [
-                    ["Yes", "acceptrisk"],
-                    ["No", "dontacceptrisk"]
-                ]
-            },
 			// Refuses but needs to confront the group, sending the story into a loop
             refuse2 : {
                 text : "He refuses to confront them because he doesn't want to get hurt like the student that was being currently bullied by the group.\nBut he still needs to do something about that group before lunch time ends.\n\nWhat would he do?",
                 choices : [
                     ["Confront them", "confront"],
                     ["Do not confont them", "refuse2"]
+                ]
+            },
+			// Confront the Black Cat Group
+            confront : {
+                text : "He goes up to the group and asks, \"Why are you doing this to the student?\"\n\n\"Well,\" the group said, \"We got him for the money we're looking for. And since he doesn't want his stuff to get stolen, we just had to do our job like we should.\"\n\n\"What did you actually do to him?\" The Orange Cat asked, \"Tell me more about it.\"\n\n\"Okay then,\" the group replied, \"We've actually threatened them by saying to him that if he declines to accept our offer, then he will deserve a beating. And since he declined to do so, we just have to beat him up. No exceptions.\"\n\nThe Orange Cat was furious. \"No, I do not like this,\" he said. \"If you ever try to do that ever again, I'm going to call the teacher or principal to come and get you guys for your actions, for what you have done to this innocent student.\"\n\n\"Oh, you want to expose us as bullies, solely?\" the group said. \"You can say that one more time and we will fight you out in the field, right outside the school.\"\n\nShould he take the risk of confronting them one more time?",
+                choices : [
+                    ["Yes", "acceptrisk"],
+                    ["No", "dontacceptrisk"]
                 ]
             },
 			// Accepts the risk of confronting one more time
@@ -161,14 +161,6 @@
                     ["Take the Black Cat Group down with his own hands", "wrong"]
                 ]
             },
-			// Gets ambushed and goes out on a brawlout and he is defeated
-            stayput : {
-                text : "The Orange Cat is then cornered by the group, and the group engages him in a brawlout on the fields. So they took him out to the fields, and The Orange Cat was nervous in the situation he is in now, so he tries his best to take the group down. After several minutes into the fight, The Orange Cat was knocked out unconsious by the group themselves. He was taken to the nurses' office to get checked up for injuries, and has to stay home until he fully recovers.\n\nAfter he is fully recovered, he will prepare himself for the worst as he comes back to the group at lunch time.\n\nWhat would he do now?",
-                choices : [
-                    ["Confront them", "confront"],
-                    ["Do not confont them", "refuse2"]
-                ]
-            },
             // unused Q&A variant
             wrong : {
                 text : "Nope. Try again.",
@@ -176,6 +168,14 @@
                     ["Get the advisor's attention to stop the Black Cat Group", "wrong"],
                     ["Setting up a trap for the Black Cat Group", "option7"],
                     ["Take the Black Cat Group down with his own hands", "wrong"]
+                ]
+            },
+			// Gets ambushed and goes out on a brawlout and he is defeated
+            stayput : {
+                text : "The Orange Cat is then cornered by the group, and the group engages him in a brawlout on the fields. So they took him out to the fields, and The Orange Cat was nervous in the situation he is in now, so he tries his best to take the group down. After several minutes into the fight, The Orange Cat was knocked out unconsious by the group themselves. He was taken to the nurses' office to get checked up for injuries, and has to stay home until he fully recovers.\n\nAfter he is fully recovered, he will prepare himself for the worst as he comes back to the group at lunch time.\n\nWhat would he do now?",
+                choices : [
+                    ["Confront them", "confront"],
+                    ["Do not confont them", "refuse2"]
                 ]
             },
 			// Asks them the money is real even though it is not
@@ -303,7 +303,6 @@
 			notdone : {
 				text : "Sorry, but this part has not been done yet!\nWait for the next release to come!",
 				choices : []
-				
 			}
         }
 
