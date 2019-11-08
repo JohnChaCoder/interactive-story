@@ -6,6 +6,7 @@
 // With help and thanks to mariflo35 and KrystalV8
 //
 // Started on Wednesday October 23, 2019
+// Finished and compiled on November 8, 2019
 //
 // Created and edited using Visual Studio Code. © 2019 Microsoft Corporation. All rights reserved.
 // ==============================================================================================================
@@ -72,7 +73,7 @@
         const story = {
 			// The beginning of our story
             intro : {
-                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and are formed to bully others for fun and money.\n\n\"WHERE'S THE MONEY?!\" the group asked to the innocent student they were bullying.\n\n\"I'm sorry,\" asked the innocent student, \"I don't have any money in my wallet!\"\n\n\"Well, if you don't have any money, how about a beating?\" the group replied.\n\n\"Uhhhh...\" the innocent student was unable to say anything.\n\nThe group then responded, \"Okay, there is no answer. Guys, let's beat him up!\" They then attacked the innocent child violently underneath the puff smokes, until the student couldn't move anymore.\n\n\"Well, next time, bring the money to us, or else you will get another beating from us!\" the group said to the innocent student. \"See you later, twerp!\" The group then leaves the scene, leaving the innocent student there on the floor unconsious.\n\nNoticing this, The Orange Cat thought to himself how he should handle that situation. What should he do?",
+                text : "The Orange Cat goes to school that morning and hears the Black Cat Group hurting one of the students in the hallways. The group had formed five years ago before his arrival and are formed to bully others for fun and money.\n\n\"WHERE'S THE MONEY?!\" the group asked to the innocent student they were bullying.\n\n\"I'm sorry,\" asked the innocent student, \"I don't have any money in my wallet!\"\n\n\"Well, if you don't have any money, how about you deserve a beating?\" the group replied.\n\n\"Uhhhh...\" the innocent student was unable to say anything.\n\nThe group then responded, \"Okay, there is no answer. Guys, let's beat him up!\" They then attacked the innocent child violently underneath the puff smokes, until the student couldn't move anymore.\n\n\"Well, next time, bring the money to us, or else you will deserve another beating from us!\" the group said to the innocent student about how he should have money in his pocket. \"See you later, twerp!\" The group then leaves the scene, leaving the innocent student there on the floor unconsious.\n\nNoticing this, he thought to himself how he should handle that situation. What would he do?",
                 choices : [
                     ["Go to class", "goclass"],
                     ["Confront", "refuse"],
@@ -150,24 +151,6 @@
                 choices : [
                     ["\"They are the real money\"", "pretendmoneyisreal"],
                     ["\"They are actually fakes\"", "truthmoneyisfake"]
-                ]
-            },
-            // unused Q&A variant
-            hideQandA : {
-                text : "The Orange Cat then hides into a well-hidden spot near the playground fields, so that the group can't see him.\n\n\"Where did he go?\" the group said.\n\nThe group then took turns finding The Orange Cat, looking for him in the playground fields, the hallways, the rooms, and other hidden spots that they would find. When they didn't find him, they gave up hope and returned to their home base.\n\n\"Well,\" the group said, \"He has disappeared from our very eyes like the wind. Return to our home base, everyone!\"\n\nOnce the group is gone, The Orange Cat then thought up the plans to take the group of bullies down.\n\nWhat is The Orange Cat thinking of?",
-                choices : [
-                    ["Get the advisor's attention to stop the Black Cat Group", "wrong"],
-                    ["Setting up a trap for the Black Cat Group", "option7"],
-                    ["Take the Black Cat Group down with his own hands", "wrong"]
-                ]
-            },
-            // unused Q&A variant
-            wrong : {
-                text : "Nope. Try again.",
-                choices : [
-                    ["Get the advisor's attention to stop the Black Cat Group", "wrong"],
-                    ["Setting up a trap for the Black Cat Group", "option7"],
-                    ["Take the Black Cat Group down with his own hands", "wrong"]
                 ]
             },
 			// Gets ambushed and goes out on a brawlout and he is defeated
@@ -293,17 +276,7 @@
             finalPageAlt2 : {
                 text : "The Orange Cat and the Black Cat Group agreed to split off to their own seperate ways, so they do not participate in any kind of event or program dedicated to anti-bullying. They are also not close friends with each other, and are not closely related to either one of them in any way possible. After the graduation of both The Orange Cat and the Black Cat Group, they continue to go out on their own seperate ways, never seeing each other again for a long time.\n\nThe two of them never formed an organization dedicated to anti-bullying together, and they did not come back to the school they used to go as guest speakers. But, however, they are still honored in special plaques at the elementary school the two of them used to go to, for their actions of anti-bullying, so not all hope has been lost.\n\nAnd since then, the two of them had their own seperate organizations dedicated to anti-bullying based on their experiences in the past years.\n\nTHE END\n\nThis is the end of the story\nPlease refresh the page to play again",
                 choices : []
-            },
-            // A null command. Does nothing, basically.
-            null : {
-                text : "null",
-                choices : []
-            },
-			// Message indicating that the section is not done and informs the user to wait until the next release
-			notdone : {
-				text : "Sorry, but this part has not been done yet!\nWait for the next release to come!",
-				choices : []
-			}
+            }
         }
 
 // ============================================================================
@@ -317,10 +290,10 @@
             let button = document.createElement
             ("button");
 
-            // Get the text
+            // Get the text from the array
             button.innerHTML = btnText
 
-            // append to HTML(?)
+            // append to HTML elements
             btnContain.appendChild(button);
 
             // Outputs the choice you have made after clicking the button
@@ -335,14 +308,14 @@
             let storyItem = document.createElement
             ("p");  // paragraph tag
 
-            // stores the text(?)
+            // stores the text from the array
             storyItem.innerText = text
 
-            // append to HTML(?)
+            // append to HTML elements
             storyContain.appendChild(storyItem);
         }
 
-        // function to output the story into HTML
+        // function to output the story into the HTML page
         function outputStory() {
 
             // sets the current page to the last index of the array.
@@ -369,9 +342,9 @@
     </script>
 
     <p></p>
-    <button onclick="about()">About</button>
+    <button onclick="about()">About this site</button> <button onclick="characters()">About the characters</button>
 
-    <!-- JavaScript code ahead-->
+    <!-- JavaScript code ahead -->
     <script>
     
     // Shows the info of the site
@@ -379,9 +352,14 @@
         alert("The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story\n\nCreated and coded by GitHub users JohnChaCoder, marflo35, and KrystalV8.\n\nCreated and edited using Visual Studio Code.\n© 2019 Microsoft Corporation. All rights reserved.")
     }
 
+    // Shows the info about the characters
+    function characters() {
+        alert("The main characters\n\nThe Orange Cat - The protagonist and the titular character of the story. He is a kind-hearted and respected anthropomorphic cat with a sense of attitude. He often looks around for suspicious people that brings danger to his friends, and if it were to happen, he would try to end it and save his friends. Sometimes, he takes the risks for himself, and makes tough decisions on what is right and what is wrong. His skin color is orange with black stripes on his arms, legs, and tail, and has black-colored eyes.\n\nBlack Cat Group - They are a group of five vicious anthropomorphic black cats at the school that engages in bullying for fun and for the money. They were formed five years before The Orange Cat came to the school. Their skin color is dark black with white stripes on their arms, legs, and tails, and white-colored eyes with pupils.")
+    }
+
     </script>
 
     <p></p>
-    <h5 class="copyright">Site version v1.0 RC1<br>© 2019. All rights reserved.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
+    <h5 class="copyright">Site version v1.0 RC2<br>© 2019. All rights reserved.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
 </body>
 </html>
