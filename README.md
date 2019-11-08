@@ -1,7 +1,7 @@
 # ocandbcg
 The Orange Cat in Grade School Hijinx: Black Cat Group Bullies - An Interactive Story Source Code (Official)
 
-This source code is open-source. You are free to make any changes to the source, and fork this source for your own interactive stories.
+This source code is open-source. You are free to make any changes to the source, make some improvements into it, and fork this source for your own interactive stories.
 
 ## What's in here?
 In this source code, you will find:
