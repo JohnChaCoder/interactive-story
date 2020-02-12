@@ -1,0 +1,118 @@
+body {
+    background-color: white;
+  }
+  p {
+    color: black;
+    font-family: "Tw Cen MT";
+    text-align: left;
+    animation-name: fadefrom;
+    animation-duration: 2s;
+  }
+  @keyframes fadefrom {
+    from {color: white;}
+    to {color: black;}
+  }
+  h1 {
+    font-weight: bold;
+    text-align: left;
+  }
+  h3 {
+    color: orange;
+    text-shadow: 1.5px 1.5px black;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Comic Sans MS";
+    animation-name: fadefrom2;
+    animation-duration: 2s;
+  }
+  @keyframes fadefrom2 {
+    from {color: white;}
+    to {color: orange;}
+    from {text-shadow: 1.5px 1.5px white;}
+    to {text-shadow: 1.5px 1.5px black;}
+  }
+  .Title {
+    color: orange;
+    text-shadow: 2px 2px black;
+    font-size: 28px;
+    font-family: "Comic Sans MS";
+    animation-name: fadefrom3;
+    animation-duration: 2s;
+  }
+  @keyframes fadefrom3 {
+    from {color: white;}
+    to {color: orange;}
+    from {text-shadow: 2px 2px white;}
+    to {text-shadow: 2px 2px black;}
+  }
+  .story {
+    font-family: "Tw Cen MT";
+  }
+  .buttons {
+    font-family: "Tw Cen MT";
+  }
+  button {
+    background-color: darkorange; /* Green */
+    border-color: rgb(185, 102, 0);
+    border-radius: 4px;
+    padding: 4px 15px;
+    color: white;
+    outline: none;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 1.5px 1.5px rgb(185, 102, 0);
+    animation-name: fadebutton1;
+    animation-duration: 2s;
+  }
+  @keyframes fadebutton1 {
+    from {background-color: white;}
+    to {background-color: darkorange;}
+    from {border-color: white;}
+    to {border-color: rgb(185, 102, 0);}
+    from {text-shadow: 1.5px 1.5px white;}
+    to {text-shadow: 1.5px 1.5px rgb(185, 102, 0);}
+    
+  }
+  button:hover {
+      background-color: orange; /* Green */
+      border-color: darkorange;
+      text-shadow: 1.5px 1.5px rgb(233, 128, 0);
+  }
+  button:active {
+      background-color: rgb(185, 102, 0); /* Green */
+      border-color: rgb(112, 50, 0);
+      text-shadow: 1.5px 1.5px rgb(112, 50, 0);
+  }
+  .intro {
+    color: black;
+    font-family: "Tw Cen MT";
+    text-align: left;
+  }
+  .copyright {
+    font-family: "Tahoma";
+    margin-bottom: -22px;
+    font-size: 10px;
+    animation-name: fadefrom4;
+    animation-duration: 2s;
+  }
+  @keyframes fadefrom4 {
+    from {color: white;}
+    to {color: black;}
+  }
+  .imgsize1 {
+    height: 15%;
+    width: 15%;
+    animation-name: fadeinimg;
+    animation-duration: 2s;
+  }
+  .imgsize2 {
+    height: 30%;
+    width: 30%;
+    animation-name: fadeinimg;
+    animation-duration: 2s;
+  }
+  @keyframes fadeinimg {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }

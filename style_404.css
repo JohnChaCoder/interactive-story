@@ -1,0 +1,94 @@
+body {
+    background: black;
+    text-align: center;
+    margin: 20px;
+  }
+  p {
+    color: white;
+    font-family: "Tw Cen MT";
+    text-align: center;
+    animation-name: fadefrom3;
+    animation-duration: 1s;
+  }
+  @keyframes fadefrom3 {
+    from {color: black;}
+    to {color: white;}
+  }
+  a {
+    color: aqua;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    animation-name: fadefrom5;
+    animation-duration: 1s;
+  }
+  @keyframes fadefrom5 {
+    from {color: black;}
+    to {color: aqua;}
+  }
+  h1 {
+    color: white;
+    text-shadow: 2px 2px rgb(100, 100, 100);
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    animation-name: fadefrom4;
+    animation-duration: 1s;
+  }
+  @keyframes fadefrom4 {
+    from {color: black;}
+    to {color: white;}
+    from {text-shadow: 2px 2px black;}
+    to {text-shadow: 2px 2px rgb(100, 100, 100);}
+  }
+  h2 {
+    color: white;
+    font-weight: bold;
+  }
+  h3 {
+    color: white;
+    font-weight: bold;
+  }
+  h4 {
+    color: white;
+    font-weight: bold;
+  }
+  h5 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  h6 {
+    color: white;
+    font-weight: bold;
+  }
+  img {
+    width: 270px;
+    margin: -5px;
+    animation-name: fadeinimg;
+    animation-duration: 1s;
+  }
+  @keyframes fadeinimg {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .Error {
+    width: 270px;
+    border-style: double;
+    border-color: white;
+    border-radius: 10px;
+  }
+  .links {
+    margin: 1px;
+  }
+  .navbar {
+    font-style: italic;
+    border-style: double;
+    margin: -1px;
+    background-color: rgb(255,255,255);
+  }
+  .copyright {
+    font-family: "Tahoma";
+    margin-bottom: -22px;
+    font-size: 10px;
+    animation-name: fadefrom3;
+    animation-duration: 1s;
+  }

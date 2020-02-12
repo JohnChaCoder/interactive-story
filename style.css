@@ -9,7 +9,7 @@ body {
   }
   p {
     color: black;
-    font-family: Tw Cen MT;
+    font-family: "Tw Cen MT";
     text-align: left;
     animation-name: fadefrom3;
     animation-duration: 2s;
@@ -22,7 +22,7 @@ body {
     color: orange;
     text-shadow: 2px 2px black;
     font-size: 28px;
-    font-family: Comic Sans MS;
+    font-family: "Comic Sans MS";
     animation-name: fadefrom2;
     animation-duration: 2s;
   }
@@ -31,40 +31,53 @@ body {
     to {color: orange;}
   }
   .story {
-    font-family: Tw Cen MT;
+    font-family: "Tw Cen MT";
   }
   .buttons {
-    font-family: Tw Cen MT;
+    font-family: "Tw Cen MT";
   }
   button {
-    background-color: darkorange; /* Green */
+    background-color: darkorange;
     border-color: rgb(185, 102, 0);
     border-radius: 4px;
     padding: 4px 15px;
     color: white;
     outline: none;
-    font-family: Comic Sans MS;
+    font-family: "Comic Sans MS";
     font-weight: bold;
     font-size: 12px;
     text-shadow: 1.5px 1.5px rgb(185, 102, 0);
+    /* fade in buttons */
+    animation-name: fadebuttons;
+    animation-duration: 2s;
+  }
+  @keyframes fadebuttons {
+    from {background-color: black;}
+    to {background-color: darkorange;}
+    from {color: black;}
+    to {color: white;}
+    from {border-color: black;}
+    to {border-color: rgb(185, 102, 0);}
+    from {text-shadow: 1.5px 1.5px black;}
+    to {text-shadow: 1.5px 1.5px rgb(185, 102, 0);}
   }
   button:hover {
-      background-color: orange; /* Green */
+      background-color: orange;
       border-color: darkorange;
       text-shadow: 1.5px 1.5px rgb(233, 128, 0);
   }
   button:active {
-      background-color: rgb(185, 102, 0); /* Green */
+      background-color: rgb(185, 102, 0);
       border-color: rgb(112, 50, 0);
       text-shadow: 1.5px 1.5px rgb(112, 50, 0);
   }
   .intro {
     color: black;
-    font-family: Tw Cen MT;
+    font-family: "Tw Cen MT";
     text-align: left;
   }
   .copyright {
-    font-family: Tahoma;
+    font-family: "Tahoma";
     margin-bottom: -22px;
     font-size: 10px;
   }
@@ -72,7 +85,7 @@ body {
     height: 30%;
     width: 30%;
     animation-name: fadeinimg;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
   }
   @keyframes fadeinimg {
     0% {opacity: 0;}
