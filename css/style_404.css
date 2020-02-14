@@ -5,10 +5,13 @@ body {
   }
   p {
     color: white;
-    font-family: "Tw Cen MT";
+    /*font-family: "Tw Cen MT";*/
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
     text-align: center;
     animation-name: fadefrom3;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }
   @keyframes fadefrom3 {
     from {color: black;}
@@ -19,7 +22,7 @@ body {
     font-family: "Comic Sans MS";
     font-weight: bold;
     animation-name: fadefrom5;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }
   @keyframes fadefrom5 {
     from {color: black;}
@@ -31,7 +34,7 @@ body {
     font-family: "Comic Sans MS";
     font-weight: bold;
     animation-name: fadefrom4;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }
   @keyframes fadefrom4 {
     from {color: black;}
@@ -64,11 +67,46 @@ body {
     width: 270px;
     margin: -5px;
     animation-name: fadeinimg;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }
   @keyframes fadeinimg {
     0% {opacity: 0;}
     100% {opacity: 1;}
+  }
+  button {
+    background-color: darkorange;
+    border-color: rgb(185, 102, 0);
+    border-radius: 4px;
+    padding: 4px 15px;
+    color: white;
+    outline: none;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 1.5px 1.5px rgb(185, 102, 0);
+    /* fade in buttons */
+    animation-name: fadebuttons;
+    animation-duration: 0.5s;
+  }
+  @keyframes fadebuttons {
+    from {background-color: black;}
+    to {background-color: darkorange;}
+    from {color: black;}
+    to {color: white;}
+    from {border-color: black;}
+    to {border-color: rgb(185, 102, 0);}
+    from {text-shadow: 1.5px 1.5px black;}
+    to {text-shadow: 1.5px 1.5px rgb(185, 102, 0);}
+  }
+  button:hover {
+      background-color: orange;
+      border-color: darkorange;
+      text-shadow: 1.5px 1.5px rgb(233, 128, 0);
+  }
+  button:active {
+      background-color: rgb(185, 102, 0);
+      border-color: rgb(112, 50, 0);
+      text-shadow: 1.5px 1.5px rgb(112, 50, 0);
   }
   .Error {
     width: 270px;
@@ -88,7 +126,7 @@ body {
   .copyright {
     font-family: "Tahoma";
     margin-bottom: -22px;
-    font-size: 10px;
+    font-size: 11px;
     animation-name: fadefrom3;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }

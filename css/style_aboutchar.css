@@ -3,7 +3,9 @@ body {
   }
   p {
     color: black;
-    font-family: "Tw Cen MT";
+    /*font-family: "Tw Cen MT";*/
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
     text-align: left;
     animation-name: fadefrom;
     animation-duration: 2s;
@@ -46,10 +48,12 @@ body {
     to {text-shadow: 2px 2px black;}
   }
   .story {
-    font-family: "Tw Cen MT";
+    /*font-family: "Tw Cen MT";*/
+    font-family: 'Ubuntu', sans-serif;
   }
   .buttons {
-    font-family: "Tw Cen MT";
+    /*font-family: "Tw Cen MT";*/
+    font-family: 'Ubuntu', sans-serif;
   }
   button {
     background-color: darkorange; /* Green */
@@ -86,13 +90,14 @@ body {
   }
   .intro {
     color: black;
-    font-family: "Tw Cen MT";
+    /*font-family: "Tw Cen MT";*/
+    font-family: 'Ubuntu', sans-serif;
     text-align: left;
   }
   .copyright {
     font-family: "Tahoma";
     margin-bottom: -22px;
-    font-size: 10px;
+    font-size: 11px;
     animation-name: fadefrom4;
     animation-duration: 2s;
   }
