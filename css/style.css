@@ -8,13 +8,16 @@ body {
     to {background-color: white;}
   }
   p {
-    color: black;
     /*font-family: "Tw Cen MT";*/
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     text-align: left;
-    animation-name: fadefrom3;
-    animation-duration: 2s;
+    /* animation-name: fadefrom3;
+    animation-duration: 2s; */
+  }
+  @keyframes fadefrom3 {
+    from {opacity: 0;}
+    to {opacity: 1;}
   }
   h1 {
     font-weight: bold;
@@ -29,12 +32,23 @@ body {
     animation-duration: 2s;
   }
   @keyframes fadefrom2 {
-    from {color: black;}
-    to {color: orange;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+    /* from {color: black;}
+    to {color: orange;} */
   }
   .story {
     /*font-family: "Tw Cen MT";*/
+    color: white;
+    text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.606);
+    font-weight: bolder;
+    background-color: darkorange;
+    border-color: rgb(185, 102, 0);
+    border-radius: 10px;
     font-family: 'Ubuntu', sans-serif;
+    border-style: solid;
+    animation-name: fadefrom3;
+    animation-duration: 2s;
   }
   button {
     background-color: darkorange;
@@ -52,14 +66,16 @@ body {
     animation-duration: 2s;
   }
   @keyframes fadebuttons {
-    from {background-color: black;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+    /* from {background-color: black;}
     to {background-color: darkorange;}
     from {color: black;}
     to {color: white;}
     from {border-color: black;}
     to {border-color: rgb(185, 102, 0);}
     from {text-shadow: 1.5px 1.5px black;}
-    to {text-shadow: 1.5px 1.5px rgb(185, 102, 0);}
+    to {text-shadow: 1.5px 1.5px rgb(185, 102, 0);} */
   }
   button:hover {
       background-color: orange;
@@ -83,12 +99,14 @@ body {
     font-size: 11px;
   }
   .imgsize {
-    height: 30%;
-    width: 30%;
+    height: 260px;
+    width: 500px;
     animation-name: fadeinimg;
     animation-duration: 2.5s;
   }
   @keyframes fadeinimg {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+    /* 0% {opacity: 0;}
+    100% {opacity: 1;} */
   }
